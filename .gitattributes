@@ -1,0 +1,5 @@
+* text=auto eol=lf
+assets/*.png -text
+assets/*.webp -text
+data/supplementary-tables.xlsx -text
+data/structures.str -text
