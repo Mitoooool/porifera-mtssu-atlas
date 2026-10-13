@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="海绵线粒体小亚基rRNA结构图谱：科研图版、分类群与序列记录、结构类型矩阵及数据下载。">
+  <meta name="theme-color" content="#143e43">
+  <title>Porifera mtSSU Atlas · 海绵线粒体rRNA结构图谱</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data/records.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <div class="preview-strip"><span class="wrap">海绵线粒体rRNA · 结构与数据 <span>数据版本：bioRxiv v1</span></span></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand" aria-label="Porifera mtSSU Atlas 首页"><span class="brand-mark" aria-hidden="true">P<span>·</span></span><span>PORIFERA<span class="brand-sub">mtSSU STRUCTURE ATLAS</span></span></a>
+      <nav aria-label="主导航"><a href="#atlas">图版</a><a href="#data">数据</a><a href="#types">结构类型</a><a href="#downloads">下载</a><a class="lab-link" href="https://mitoooool.github.io/" target="_blank" rel="noopener noreferrer">LISEB ↗<span class="sr-only">（新标签页）</span></a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">PORIFERA / MITOCHONDRIAL SSU rRNA</p>
+        <h1 id="page-title">海绵线粒体<br><span>rRNA结构图谱</span></h1>
+        <p class="hero-english" lang="en">A shared scaffold. Diverse local structures.</p>
+        <p class="hero-description">在共同的同源结构坐标中，浏览海绵线粒体小亚基rRNA的保守骨架与局部变异。从科研图版进入记录、序列和结构类型。</p>
+        <div class="hero-actions"><a class="button primary" href="#data">浏览数据 <span aria-hidden="true">↓</span></a><a class="button secondary" href="#atlas">探索结构图版</a></div>
+        <p class="paper-status"><span class="status-dot" aria-hidden="true"></span> bioRxiv 预印本 · v1 · 30 August 2026 <a href="#publication">论文与引用 ↗</a></p>
+      </div>
+      <figure class="hero-figure"><div class="figure-topline"><span>STRUCTURAL MAP</span><span>FIG. 2a / DETAIL</span></div><img src="assets/structure-map.webp" alt="论文图2a的局部：保守骨架周围不同子结构的模式示意" width="900" height="958"><figcaption><span>保守骨架中的局部变化</span><button class="text-button" data-figure="2" type="button">查看完整图版 ↗</button></figcaption></figure>
+    </section>
+    <div class="wrap stat-strip" aria-label="数据集概览">
+      <div><strong>216</strong><span>最终分析记录</span><small>4纲 · 22目</small></div>
+      <div><strong>9</strong><span>保守结构锚点</span><small>8个茎 · 1个环</small></div>
+      <div><strong>12</strong><span>高变子结构</span><small>38种局部结构类型</small></div>
+      <div><strong>62</strong><span>组合类型</span><small>长度 853–2,019 nt</small></div>
+    </div>
+
+    <section class="atlas-section section" id="atlas" aria-labelledby="atlas-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">01 / FIGURE GALLERY</p><h2 id="atlas-title">从图版认识结构</h2></div><p>保留作者原图，支持放大及原图查看。</p></div>
+        <div class="gallery-layout">
+          <div class="gallery-image"><button id="gallery-open" class="image-button" type="button" aria-label="放大当前科研图版"><img id="gallery-image" src="assets/figure-1.webp" alt="图1：四个海绵纲的保守结构锚点和序列logo" loading="lazy"><span class="image-action">放大图版 ↗</span></button></div>
+          <aside class="gallery-info" aria-label="图版选择与说明">
+            <div class="gallery-tabs" role="group" aria-label="选择图版"><button type="button" data-gallery="1" aria-pressed="true"><span>FIGURE 01</span>保守结构锚点<small>同源比较的起点</small></button><button type="button" data-gallery="2" aria-pressed="false"><span>FIGURE 02</span>结构变异与分布<small>局部类型、类群分布与长度</small></button></div>
+            <h3 id="gallery-title">九个保守结构锚点</h3><p id="gallery-description">H9、H367、H500、H769、H885、H921、H944、H1506及H673-loop，将高度分化的分子放入共同的比较框架。</p>
+            <p class="quiet" id="gallery-source">图1 · 序列logo及结构锚点示意。分类群拓扑用于组织展示，枝长不代表时间或演化距离。</p>
+            <a id="gallery-download" class="text-link" href="assets/figure-1.png" download>下载原始PNG ↗</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="data-section section wrap" id="data" aria-labelledby="data-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / DATA EXPLORER</p><h2 id="data-title">浏览记录与分类群</h2></div><p>源于补充表S2b与S2c。记录数不等同物种数。</p></div>
+      <div class="class-grid" id="class-grid" role="group" aria-label="按纲筛选"></div>
+      <form class="data-controls" id="filters" role="search" aria-label="检索项目记录">
+        <label class="search-field"><span>检索记录</span><input type="search" id="search" placeholder="输入登录号、物种、科或组合类型" autocomplete="off"></label>
+        <label><span>目</span><select id="order"><option value="">全部目</option></select></label>
+        <label><span>排序</span><select id="sort"><option value="default">源表顺序</option><option value="length-up">长度从短到长</option><option value="length-down">长度从长到短</option><option value="species">物种名称</option></select></label>
+        <button class="reset-button" type="reset">清除筛选</button>
+      </form>
+      <div class="table-topline"><p id="result-count" role="status" aria-live="polite">正在载入216条记录…</p><button id="export-filtered" class="text-button" type="button">导出当前结果 TSV ↗</button></div>
+      <div class="table-scroll" tabindex="0" aria-label="记录表，窄屏可横向滚动"><table><caption class="sr-only">最终分析数据的登录号、物种、分类群、长度及组合类型</caption><thead><tr><th scope="col">登录号</th><th scope="col">物种</th><th scope="col">目 / 纲</th><th scope="col" class="numeric">长度 <small>nt</small></th><th scope="col">组合类型</th><th scope="col"><span class="sr-only">记录详情</span></th></tr></thead><tbody id="record-rows"></tbody></table></div>
+      <div class="pagination"><span id="page-info"></span><div><button type="button" id="previous">上一页</button><button type="button" id="next">下一页</button></div></div>
+      <details class="data-note"><summary>数据核对提示：1条记录的表格序列与结构文件待核对</summary><p>JX978470在S2b中为1,003 nt，但S6结构文件对应序列为1,277 nt。本站保留原始来源，不自动替换；该记录的配对展示与单条结构导出暂不可用。其余215条序列在忽略字母大小写后匹配。</p></details>
+      <noscript><p>记录浏览需要JavaScript。您仍可在下方下载完整补充表。</p></noscript>
+    </section>
+
+    <section class="types-section section" id="types" aria-labelledby="types-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">03 / STRUCTURAL TYPES</p><h2 id="types-title">十二个子结构，各有变化</h2></div><p>选择子结构，查看216条记录中的类型分布。</p></div>
+      <div class="type-layout"><div class="segment-grid" id="segment-grid" role="group" aria-label="选择高变子结构"></div><div class="type-detail"><div class="type-title-row"><h3 id="segment-title">H61</h3><span id="segment-count"></span></div><div id="type-bars"></div><p class="quiet">类型字母只在当前子结构内有意义。不同子结构的“A”不表示同一种结构。</p></div></div>
+    </div></section>
+
+    <section class="downloads-section section wrap" id="downloads" aria-labelledby="downloads-title">
+      <div class="section-heading"><div><p class="eyebrow">04 / DATA &amp; REUSE</p><h2 id="downloads-title">获取数据</h2></div><p>使用数据请引用原论文。图版与数据未附加开放许可，再分发请联系作者。</p></div>
+      <div class="download-grid">
+        <a class="download-card" href="data/supplementary-tables.xlsx" download><span class="file-tag">XLSX / S1–S5</span><h3>完整补充表</h3><p>候选记录、分类、结构注释、类型矩阵与候选插入区域。</p><span class="download-action">下载补充表 <span aria-hidden="true">↓</span></span></a>
+        <a class="download-card" href="data/records.tsv" download><span class="file-tag">TSV / 216 RECORDS</span><h3>轻量记录索引</h3><p>分类信息、长度、参考模板与12个子结构的类型编码。</p><span class="download-action">下载数据索引 <span aria-hidden="true">↓</span></span></a>
+        <a class="download-card" href="data/sequences.fasta" download><span class="file-tag">FASTA / S2b</span><h3>mtSSU序列</h3><p>从S2b提取的216条RNA序列，保留原始大小写。</p><span class="download-action">下载序列 <span aria-hidden="true">↓</span></span></a>
+        <a class="download-card" href="data/structures.str" download><span class="file-tag">STR / ORIGINAL S6</span><h3>原始结构文件</h3><p>序列与dot-bracket模型。含1条待核对记录，见上方提示。</p><span class="download-action">下载原始S6 <span aria-hidden="true">↓</span></span></a>
+      </div>
+    </section>
+
+    <section class="publication-section" id="publication" aria-labelledby="publication-title"><div class="wrap publication-layout"><div><p class="eyebrow">PUBLICATION / bioRxiv v1</p><h2 id="publication-title" lang="en">Secondary Structure Diversity of the Mitochondrial Small-Subunit rRNA in Porifera</h2><p class="authors" lang="en">Zhou Yunqian, Gong Lin, Niu Gengyun, Shi Haihe, Li Xinzheng, Robin Gutell &amp; Wei Meicai</p><p class="quiet">公开预印本，未经同行评审。结构模型与类型矩阵用于比较描述，不直接建立功能、祖先状态或适应性结论。</p><a class="text-link" href="https://doi.org/10.64898/2026.08.28.747467" target="_blank" rel="noopener noreferrer">阅读预印本 ↗<span class="sr-only">（新标签页）</span></a></div><aside><p class="eyebrow">PROJECT / LISEB</p><h3>结构、数据与证据<br>保持可追溯</h3><p>图版和数据以bioRxiv v1提交材料为来源。待核对项已标注，原始下载文件保留，网页派生数据与原始模型分别说明。</p><a class="text-link" href="https://mitoooool.github.io/" target="_blank" rel="noopener noreferrer">实验室主页 ↗<span class="sr-only">（新标签页）</span></a></aside></div></section>
+  </main>
+  <footer class="wrap footer"><span>Porifera mtSSU Atlas <span class="footer-divider">/</span> LISEB</span><span>数据版本 bioRxiv v1 · 网站更新 2026.10.13</span></footer>
+
+  <dialog id="figure-dialog" class="figure-dialog" aria-labelledby="figure-modal-title"><div class="modal-toolbar"><h2 id="figure-modal-title">科研图版</h2><div class="zoom-controls"><button type="button" id="zoom-out" aria-label="缩小图版">−</button><output id="zoom-label">100%</output><button type="button" id="zoom-in" aria-label="放大图版">＋</button><button type="button" id="zoom-reset">适应窗口</button></div><button type="button" class="close-button" data-close="figure-dialog" aria-label="关闭图版">×</button></div><div class="zoom-viewport" id="zoom-viewport"><img id="modal-figure" src="assets/figure-1.png" alt="当前科研图版"></div><p class="modal-footnote">可放大并滚动查看细节；按Esc关闭。</p></dialog>
+  <dialog id="record-dialog" class="record-dialog" aria-labelledby="record-title"><div class="modal-toolbar"><div><p class="eyebrow" id="record-accession"></p><h2 id="record-title"></h2></div><button type="button" class="close-button" data-close="record-dialog" aria-label="关闭记录">×</button></div><div class="record-content" id="record-content"></div></dialog>
+</body>
+</html>

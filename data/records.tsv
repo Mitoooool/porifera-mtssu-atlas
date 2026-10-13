@@ -1,0 +1,217 @@
+Accession	Class	Subclass	Order	Family	Genus	Species	Length_nt	Reference_template	H61	H122	H240	H339	H406+H441	H577-H655	H821	H996	H1068	H1113+H1118	H1241	H1399	Composite_type
+OZ176006	Demospongiae	Heteroscleromorpha	Agelasida	Agelasidae	Agelas	Agelas tubulata	1284	AY320032	B	D	B	B	A	A	B	C	B	B	A	E	BDBBAABCBBAE
+EU237475	Demospongiae	Heteroscleromorpha	Agelasida	Agelasidae	Agelas	Agelas schmidtii	1258	AY320032	B	D	B	B	A	A	B	B	B	B	A	E	BDBBAABBBBAE
+OX422206	Demospongiae	Heteroscleromorpha	Agelasida	Agelasidae	Agelas	Agelas oroides	1324	AY320032	B	E	B	B	A	A	B	B	B	A	A	E	BEBBAABBBAAE
+OM729609	Demospongiae	Heteroscleromorpha	Agelasida	Astroscleridae	Astrosclera	Astrosclera willeyana	1374	AY320032	B	D	B	B	A	A	B	E	B	A	A	E	BDBBAABEBAAE
+AY791693	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Axinella	Axinella corrugata	1510	AY320032	B	D	B	B	A	B	B	E	B	A	A	E	BDBBABBEBAAE
+OM729608	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Axinella	Axinella polypoides	1607	AY320032	E	D	B	B	A	E1	E	C	B	E2	E	E	EDBBAE1ECBE2EE
+MK079941	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Axinella	Axinella damicornis	1569	AY320032	B	D	B	B	A	B	B	E	B	A	A	E	BDBBABBEBAAE
+OZ007519	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Axinella	Axinella damicornis	2019	MK079941	B	E	B	B	A	E1	B	E	B	E2	A	E	BEBBAE1BEBE2AE
+OM729623	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Axinella	Axinella infundibuliformis	1581	AY320032	E	D	B	B	A	E1	E	C	B	E2	E	E	EDBBAE1ECBE2EE
+OZ178476	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Axinella	Axinella polypoides	1607	AY320032	E	D	B	B	A	E1	E	C	B	E2	E	E	EDBBAE1ECBE2EE
+MK079947	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Phakellia	Phakellia ventilabrum	1365	AY320032	B	E	B	B	A	A	B	E	B	A	A	E	BEBBAABEBAAE
+OM729648	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Phakellia	Phakellia ventilabrum	1367	AY320032	B	E	B	B	A	A	B	E	B	A	A	E	BEBBAABEBAAE
+OY997403	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Phakellia	Phakellia ventilabrum	1365	AY320032	B	E	B	B	A	A	B	E	B	A	A	E	BEBBAABEBAAE
+OZ194383	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Phakellia	Phakellia ventilabrum	1367	AY320032	B	E	B	B	A	A	B	E	B	A	A	E	BEBBAABEBAAE
+OZ183513	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Phakellia	Phakellia robusta	1523	AY320032	E	D	B	B	B	E1	B	B	B	A	A	E	EDBBBE1BBBAAE
+EU237488	Demospongiae	Heteroscleromorpha	Axinellida	Axinellidae	Ptilocaulis	Ptilocaulis walpersi	1243	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OM729610	Demospongiae	Heteroscleromorpha	Axinellida	Heteroxyidae	Heteroxya	Heteroxya sp. n. DVL-2023	1303	AY320032	B	D	B	B	A	A	E	C	B	A	A	E	BDBBAAECBAAE
+EU237480	Demospongiae	Heteroscleromorpha	Axinellida	Raspailiidae	Ectyoplasia	Ectyoplasia ferox	1197	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OM729649	Demospongiae	Heteroscleromorpha	Axinellida	Raspailiidae	Raspaciona	Raspaciona aculeata	1230	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+MF947452	Demospongiae	Heteroscleromorpha	Axinellida	Stelligeridae	Plenaster	Plenaster craigi	1234	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OM729645	Demospongiae	Heteroscleromorpha	Biemnida	Biemnidae	Biemna	Biemna caribea	1303	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OM729638	Demospongiae	Heteroscleromorpha	Biemnida	Biemnidae	Neofibularia	Neofibularia nolitangere	1305	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OM729647	Demospongiae	Heteroscleromorpha	Bubarida	Desmanthidae	Petromica	Petromica sp. DVL-2023	1237	AY320032	B	D	B	B	A	A	E	B	B	A	A	E	BDBBAAEBBAAE
+OM729637	Demospongiae	Heteroscleromorpha	Bubarida	Dictyonellidae	NA	Dictyonellidae sp. n. DVL-2023	1400	AY320032	B	E	B	B	A	A	B	E	B	A	A	E	BEBBAABEBAAE
+OM729606	Demospongiae	Heteroscleromorpha	Bubarida	Dictyonellidae	Acanthella	Acanthella acuta	1472	AY320032	B	D	B	B	A	A	B	E	B	E2	A	E	BDBBAABEBE2AE
+OM729628	Demospongiae	Heteroscleromorpha	Bubarida	Dictyonellidae	Dictyonella	Dictyonella marsilii	1575	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+OM729656	Demospongiae	Heteroscleromorpha	Bubarida	Dictyonellidae	Svenzea	Svenzea zeai	1347	AY320032	B	D	B	B	A	A	B	B	B	E1	A	E	BDBBAABBBE1AE
+OM729653	Demospongiae	Heteroscleromorpha	Bubarida	Dictyonellidae	Svenzea	Svenzea flava	1355	AY320032	B	D	B	B	A	A	B	B	B	E1	A	E	BDBBAABBBE1AE
+EU237478	Demospongiae	Verongimorpha	Chondrillida	Chondrillidae	Chondrilla	Chondrilla aff. nucula CHOND	1194	AY320032	B	B	B	B	A	A	B	C	B	A	A	A	BBBBAABCBAAA
+OZ026571	Demospongiae	Verongimorpha	Chondrillida	Chondrillidae	Chondrilla	Chondrilla caribensis	1194	AY320032	B	B	B	B	A	A	B	C	B	A	A	A	BBBBAABCBAAA
+OM729663	Demospongiae	Verongimorpha	Chondrillida	Chondrillidae	Chondrosia	Chondrosia reniformis	1092	AY320032	B	B	B	B	A	A	B	B	B	A	A	A	BBBBAABBBAAA
+OX359203	Demospongiae	Verongimorpha	Chondrillida	Chondrillidae	Chondrosia	Chondrosia reniformis	1092	AY320032	B	B	B	B	A	A	B	B	B	A	A	A	BBBBAABBBAAA
+OM729662	Demospongiae	Verongimorpha	Chondrillida	Chondrillidae	Thymosia	Thymosia sp. n. DVL-2023	1327	AY320032	E	B	B	B	A	A	B	C	B	E1	A	E	EBBBAABCBE1AE
+MK079946	Demospongiae	Verongimorpha	Chondrillida	Halisarcidae	Halisarca	Halisarca caerulea	1207	AY320032	B	B	B	B	A	A	B	E	B	A	A	A	BBBBAABEBAAA
+OM729667	Demospongiae	Verongimorpha	Chondrillida	Halisarcidae	Halisarca	Halisarca caerulea	1207	AY320032	B	B	B	B	A	A	B	E	B	A	A	A	BBBBAABEBAAA
+OY720623	Demospongiae	Verongimorpha	Chondrillida	Halisarcidae	Halisarca	Halisarca caerulea	1207	AY320032	B	B	B	B	A	A	B	E	B	A	A	A	BBBBAABEBAAA
+EU237483	Demospongiae	Verongimorpha	Chondrillida	Halisarcidae	Halisarca	Halisarca dujardinii	1188	AY320032	B	B	B	B	A	A	B	C	B	A	A	A	BBBBAABCBAAA
+HQ606142	Demospongiae	Verongimorpha	Chondrillida	Halisarcidae	Halisarca	Halisarca harmelini	1206	AY320032	B	B	B	B	A	A	B	C	B	A	A	A	BBBBAABCBAAA
+JX978470	Calcarea	Calcinea	Clathrinida	Clathrinidae	Clathrina	Clathrina clathrus	1003	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OZ005708	Demospongiae	Heteroscleromorpha	Clionaida	Clionaidae	Cliona	Cliona orientalis	1301	AY320032	B	C	B	B	B	A	B	E	B	A	A	A	BCBBBABEBAAA
+MK079942	Demospongiae	Heteroscleromorpha	Clionaida	Clionaidae	Cliona	Cliona varians	1318	AY320032	B	C	B	B	B	A	B	C	B	E2	A	E	BCBBBABCBE2AE
+OM273296	Demospongiae	Heteroscleromorpha	Clionaida	Clionaidae	Cliona	Cliona patera	1239	AY320032	B	B	B	B	B	A	E	B	B	A	A	E	BBBBBAEBBAAE
+OM273297	Demospongiae	Heteroscleromorpha	Clionaida	Clionaidae	Cliona	Cliona patera	1239	AY320032	B	B	B	B	B	A	E	B	B	A	A	E	BBBBBAEBBAAE
+OM273298	Demospongiae	Heteroscleromorpha	Clionaida	Clionaidae	Cliona	Cliona patera	1239	AY320032	B	B	B	B	B	A	E	B	B	A	A	E	BBBBBAEBBAAE
+OM273299	Demospongiae	Heteroscleromorpha	Clionaida	Clionaidae	Cliona	Cliona patera	1239	AY320032	B	B	B	B	B	A	E	B	B	A	A	E	BBBBBAEBBAAE
+OM273300	Demospongiae	Heteroscleromorpha	Clionaida	Clionaidae	Cliona	Cliona patera	1239	AY320032	B	B	B	B	B	A	E	B	B	A	A	E	BBBBBAEBBAAE
+OM273301	Demospongiae	Heteroscleromorpha	Clionaida	Clionaidae	Cliona	Cliona patera	1239	AY320032	B	B	B	B	B	A	E	B	B	A	A	E	BBBBBAEBBAAE
+OM729613	Demospongiae	Heteroscleromorpha	Clionaida	Clionaidae	Cliona	Cliona varians	1318	AY320032	B	C	B	B	B	A	B	C	B	E2	A	E	BCBBBABCBE2AE
+OM729625	Demospongiae	Heteroscleromorpha	Clionaida	Clionaidae	Clionaopsis	Clionaopsis sp. MO1027	1223	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OM729624	Demospongiae	Heteroscleromorpha	Clionaida	Clionaidae	Clionaopsis	Clionaopsis sp. MO1027	1314	AY320032	B	C	B	B	B	A	B	B	B	E1	A	E	BCBBBABBBE1AE
+OM729639	Demospongiae	Heteroscleromorpha	Clionaida	Placospongiidae	Placospongia	Placospongia intermedia	1409	AY320032	B	C	B	B	B	A	E	B	B	E1	A	E	BCBBBAEBBE1AE
+OM729614	Demospongiae	Heteroscleromorpha	Clionaida	Spirastrellidae	Diplastrella	Diplastrella bistellata	1675	AY320032	B	E	B	B	A	A	B	E	B	E2	A	E	BEBBAABEBE2AE
+MZ675556	Demospongiae	Heteroscleromorpha	Clionaida	Spirastrellidae	Spheciospongia	Spheciospongia vesparium	1185	AY320032	B	B	B	B	B	A	B	B	B	A	A	A	BBBBBABBBAAA
+OM729627	Demospongiae	Heteroscleromorpha	Clionaida	Spirastrellidae	Spirastrella	Spirastrella cunctatrix	1655	AY320032	B	E	B	B	A	A	B	B	B	E2	A	E	BEBBAABBBE2AE
+OM729666	Demospongiae	Keratosa	Dendroceratida	Darwinellidae	Darwinella	Darwinella gardineri	1068	AY320032	B	B	B	B	A	A	B	B	B	A	A	A	BBBBAABBBAAA
+MK079943	Demospongiae	Keratosa	Dendroceratida	Darwinellidae	Dendrilla	Dendrilla antarctica	1344	AY320032	B	C	B	A	A	E2	B	E	B	A	A	E	BCBAAE2BEBAAE
+OM729664	Demospongiae	Keratosa	Dendroceratida	Dictyodendrillidae	Dictyodendrilla	Dictyodendrilla dendyi	1263	AY320032	B	C	B	A	A	B	E	B	B	A	A	E	BCBAABEBBAAE
+EU237485	Demospongiae	Keratosa	Dendroceratida	Dictyodendrillidae	Igernella	Igernella notabilis	1264	AY320032	B	C	B	A	A	E2	B	B	B	A	A	E	BCBAAE2BBBAAE
+KC510274	Demospongiae	Keratosa	Dictyoceratida	Irciniidae	Ircinia	Ircinia sp. LCJ03	1025	JX535019	A	B	E	A	A	A	B	A	B	A	A	A	ABEAAABABAAA
+KC510273	Demospongiae	Keratosa	Dictyoceratida	Irciniidae	Ircinia	Ircinia sp. LCJ01	1002	JX535019	A	C	E	A	A	A	B	A	B	A	A	A	ACEAAABABAAA
+GQ337013	Demospongiae	Keratosa	Dictyoceratida	Irciniidae	Ircinia	Ircinia strobilina	1027	JX535019	A	B	E	A	A	A	B	A	B	A	A	A	ABEAAABABAAA
+EU237484	Demospongiae	Keratosa	Dictyoceratida	Spongiidae	Hippospongia	Hippospongia lachne	1096	JX535019	A	B	E	A	A	A	B	A	B	A	A	A	ABEAAABABAAA
+JX535019	Demospongiae	Keratosa	Dictyoceratida	Spongiidae	Hyattella	Hyattella sinuosa	967	JX535019	A	C	B	A	A	A	B	A	B	A	A	A	ACBAAABABAAA
+OZ174364	Demospongiae	Keratosa	Dictyoceratida	Spongiidae	Rhopaloeides	Rhopaloeides odorabile	977	JX535019	A	C	E	A	A	A	B	A	B	A	A	A	ACEAAABABAAA
+OZ005756	Demospongiae	Keratosa	Dictyoceratida	Spongiidae	Spongia	Spongia lamella	941	JX535019	A	B	B	A	A	A	B	A	B	A	A	A	ABBAAABABAAA
+OZ172661	Demospongiae	Keratosa	Dictyoceratida	Spongiidae	Spongia	Spongia officinalis	1019	JX535019	A	B	E	A	A	A	B	A	B	A	A	A	ABEAAABABAAA
+LC133169	Demospongiae	Keratosa	Dictyoceratida	Thorectidae	Cacospongia	Cacospongia mycofijiensis	1043	JX535019	A	B	E	A	A	A	B	A	B	A	A	A	ABEAAABABAAA
+OM729661	Demospongiae	Keratosa	Dictyoceratida	Thorectidae	Phyllospongia	Phyllospongia foliascens	1123	JX535019	A	D	E	A	A	A	B	A	B	A	A	A	ADEAAABABAAA
+OZ156462	Demospongiae	Keratosa	Dictyoceratida	Thorectidae	Phyllospongia	Phyllospongia foliascens	1125	JX535019	A	D	E	A	A	A	B	A	B	A	A	A	ADEAAABABAAA
+EU237477	Demospongiae	Heteroscleromorpha	Haplosclerida	Callyspongiidae	Callyspongia	Callyspongia plicifera	1205	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+OM729611	Demospongiae	Heteroscleromorpha	Haplosclerida	Chalinidae	Chalinula	Chalinula loosanoffi	1207	AY320032	B	B	B	B	A	A	B	B	B	A	A	E	BBBBAABBBAAE
+OZ024793	Demospongiae	Heteroscleromorpha	Haplosclerida	Chalinidae	Haliclona	Haliclona indistincta	1088	AY320032	B	B	B	B	A	A	B	B	B	A	A	A	BBBBAABBBAAA
+OZ194986	Demospongiae	Heteroscleromorpha	Haplosclerida	Chalinidae	Haliclona	Haliclona cinerea	1206	AY320032	B	B	B	B	A	A	B	B	B	A	A	E	BBBBAABBBAAE
+OM729618	Demospongiae	Heteroscleromorpha	Haplosclerida	Chalinidae	Haliclona	Haliclona indistincta	1087	AY320032	B	B	B	B	A	A	B	B	B	A	A	A	BBBBAABBBAAA
+OM729617	Demospongiae	Heteroscleromorpha	Haplosclerida	Chalinidae	Haliclona	Haliclona implexiformis	1203	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+OM729634	Demospongiae	Heteroscleromorpha	Haplosclerida	Chalinidae	Haliclona	Haliclona manglaris	1205	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+DQ915601	Demospongiae	Heteroscleromorpha	Haplosclerida	Niphatidae	Amphimedon	Amphimedon queenslandica	1323	AY320032	B	C	B	B	B	B	B	B	A	A	E	E	BCBBBBBBAAEE
+EU237474	Demospongiae	Heteroscleromorpha	Haplosclerida	Niphatidae	Amphimedon	Amphimedon compressa	1078	AY320032	B	B	B	B	A	A	B	A	B	A	A	A	BBBBAABABAAA
+OM729631	Demospongiae	Heteroscleromorpha	Haplosclerida	Niphatidae	Niphates	Niphates digitalis	1221	AY320032	B	C	B	B	A	A	B	B	A	A	A	E	BCBBAABBAAAE
+OM729643	Demospongiae	Heteroscleromorpha	Haplosclerida	Petrosiidae	Neopetrosia	Neopetrosia sigmafera	1195	AY320032	B	C	B	B	A	A	B	A	E	A	A	A	BCBBAABAEAAA
+KR911863	Demospongiae	Heteroscleromorpha	Haplosclerida	Petrosiidae	Petrosia	Petrosia ficiformis	1189	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+OX345654	Demospongiae	Heteroscleromorpha	Haplosclerida	Petrosiidae	Petrosia	Petrosia ficiformis	1189	AY320032	B	B	B	B	A	A	B	A	A	A	A	E	BBBBAABAAAAE
+EU237490	Demospongiae	Heteroscleromorpha	Haplosclerida	Petrosiidae	Xestospongia	Xestospongia muta	1310	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OM729660	Demospongiae	Heteroscleromorpha	Haplosclerida	Petrosiidae	Xestospongia	Xestospongia testudinaria	1310	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OY848932	Demospongiae	Heteroscleromorpha	Haplosclerida	Petrosiidae	Xestospongia	Xestospongia muta	1310	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OZ014426	Demospongiae	Heteroscleromorpha	Haplosclerida	Petrosiidae	Xestospongia	Xestospongia bergquistia	1310	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OM729629	Demospongiae	Heteroscleromorpha	Haplosclerida	Petrosiidae	Xestospongia	Xestospongia testudinaria	1068	AY320032	B	B	B	B	A	A	B	A	B	A	A	A	BBBBAABABAAA
+HQ269353	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Oscarella	Oscarella tuberculata	1277	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+HQ269355	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Oscarella	Oscarella microlobata	1281	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+HQ269358	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Oscarella	Oscarella viridis	1280	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+HQ269361	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Oscarella	Oscarella lobularis	1277	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+JX963639	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Oscarella	Oscarella sp. violet	1277	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+JX963640	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Oscarella	Oscarella tuberculata	1277	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+KY682864	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Oscarella	Oscarella pearsei	1283	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+KY682865	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Oscarella	Oscarella balibaloi	1283	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+OX382170	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Oscarella	Oscarella lobularis	1277	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+EF081250	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Oscarella	Oscarella carmela	1279	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+HQ269364	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Oscarella	Oscarella malakhovi	1278	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+HQ269357	Homoscleromorpha	NA	Homosclerophorida	Oscarellidae	Pseudocorticium	Pseudocorticium jarrei	1280	AY320032	B	D	B	B	A	A	B	C	B	E1	A	E	BDBBAABCBE1AE
+HQ269363	Homoscleromorpha	NA	Homosclerophorida	Plakinidae	Corticium	Corticium candelabrum	1267	AY320032	B	D	B	B	B	A	B	B	B	E1	A	E	BDBBBABBBE1AE
+OY729849	Homoscleromorpha	NA	Homosclerophorida	Plakinidae	Corticium	Corticium candelabrum	1273	AY320032	B	D	B	B	B	A	B	B	B	E1	A	E	BDBBBABBBE1AE
+HQ269351	Homoscleromorpha	NA	Homosclerophorida	Plakinidae	Plakina	Plakina monolopha	1273	AY320032	B	D	B	B	B	A	B	B	B	E1	A	E	BDBBBABBBE1AE
+HQ269352	Homoscleromorpha	NA	Homosclerophorida	Plakinidae	Plakina	Plakina crypta	1284	AY320032	B	D	B	B	B	A	B	B	B	E1	A	E	BDBBBABBBE1AE
+HQ269356	Homoscleromorpha	NA	Homosclerophorida	Plakinidae	Plakina	Plakina trilopha	1297	AY320032	B	D	B	B	B	A	B	B	B	E2	A	E	BDBBBABBBE2AE
+HQ269354	Homoscleromorpha	NA	Homosclerophorida	Plakinidae	Plakina	Plakina sp. DVL-2010	1268	AY320032	B	D	B	B	B	A	B	B	B	E1	A	E	BDBBBABBBE1AE
+HQ269360	Homoscleromorpha	NA	Homosclerophorida	Plakinidae	Plakina	Plakina jani	1268	AY320032	B	D	B	B	B	A	B	B	B	E1	A	E	BDBBBABBBE1AE
+EU237487	Homoscleromorpha	NA	Homosclerophorida	Plakinidae	Plakinastrella	Plakinastrella cf. onkodes DVL-2011	1268	AY320032	B	D	B	B	B	A	B	B	B	E1	A	E	BDBBBABBBE1AE
+HQ269359	Homoscleromorpha	NA	Homosclerophorida	Plakinidae	Plakortis	Plakortis halichondrioides	1273	AY320032	B	D	B	B	B	A	B	B	B	E1	A	E	BDBBBABBBE1AE
+HQ269362	Homoscleromorpha	NA	Homosclerophorida	Plakinidae	Plakortis	Plakortis simplex	1274	AY320032	B	D	B	B	B	A	B	B	B	E1	A	E	BDBBBABBBE1AE
+OM729630	Demospongiae	Heteroscleromorpha	Poecilosclerida	NA	NA	Poecilosclerida sp. DVL-2023	1225	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OZ017794	Demospongiae	Heteroscleromorpha	Poecilosclerida	Cladorhizidae	Lycopodina	Lycopodina hypogea	1197	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+PP657140	Demospongiae	Heteroscleromorpha	Poecilosclerida	Cladorhizidae	Lycopodina	Lycopodina hypogea	1196	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OM729635	Demospongiae	Heteroscleromorpha	Poecilosclerida	Coelosphaeridae	Lissodendoryx	Lissodendoryx colombiensis	1207	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OM729612	Demospongiae	Heteroscleromorpha	Poecilosclerida	Crambeidae	Crambe (in: sponges)	Crambe crambe	1406	AY320032	B	E	B	B	A	A	E	B	B	A	E	E	BEBBAAEBBAEE
+OZ004599	Demospongiae	Heteroscleromorpha	Poecilosclerida	Crambeidae	Crambe (in: sponges)	Crambe crambe	1407	AY320032	B	E	B	B	A	A	E	B	B	A	E	E	BEBBAAEBBAEE
+KR911862	Demospongiae	Heteroscleromorpha	Poecilosclerida	Crellidae	Crella	Crella elegans	1219	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OM729626	Demospongiae	Heteroscleromorpha	Poecilosclerida	Hymedesmiidae	Hymedesmia	Hymedesmia sp. n. DVL-2023	1223	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+MK079948	Demospongiae	Heteroscleromorpha	Poecilosclerida	Hymedesmiidae	Phorbas	Phorbas areolatus	1217	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OM729646	Demospongiae	Heteroscleromorpha	Poecilosclerida	Hymedesmiidae	Phorbas	Phorbas amaranthus	1222	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+EU237486	Demospongiae	Heteroscleromorpha	Poecilosclerida	Iotrochotidae	Iotrochota	Iotrochota birotulata	1215	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+AM420314	Demospongiae	Heteroscleromorpha	Poecilosclerida	Latrunculiidae	Negombata	Negombata magnifica	1234	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OM729636	Demospongiae	Heteroscleromorpha	Poecilosclerida	Microcionidae	Clathria	Clathria curacaoensis	1235	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OZ024687	Demospongiae	Heteroscleromorpha	Poecilosclerida	Podospongiidae	Diacarnus	Diacarnus erythraeanus	1257	AY320032	B	C	B	B	B	A	B	B	B	A	A	E	BCBBBABBBAAE
+OM729644	Demospongiae	Heteroscleromorpha	Poecilosclerida	Tedaniidae	Tedania	Tedania ignis	1200	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+OM729642	Demospongiae	Heteroscleromorpha	Polymastiida	Polymastiidae	Polymastia	Polymastia tenax	1346	AY320032	E	C	B	B	C	A	E	B	B	A	A	E	ECBBCAEBBAAE
+KJ129611	Demospongiae	Heteroscleromorpha	Polymastiida	Polymastiidae	Polymastia	Polymastia littoralis	1493	AY320032	E	C	B	B	C	A	E	E	B	A	A	E	ECBBCAEEBAAE
+OM729657	Demospongiae	Heteroscleromorpha	Sphaerocladina	Vetulinidae	Vetulina	Vetulina sp. DVL-2023	1335	AY320032	B	C	B	B	A	B	B	B	B	A	A	E	BCBBABBBBAAE
+JQ302310	Demospongiae	Heteroscleromorpha	Spongillida	Lubomirskiidae	Baikalospongia	Baikalospongia intermedia profundalis	1791	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+GU385217	Demospongiae	Heteroscleromorpha	Spongillida	Lubomirskiidae	Lubomirskia	Lubomirskia baikalensis	1801	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+JQ302309	Demospongiae	Heteroscleromorpha	Spongillida	Lubomirskiidae	Rezinkovia	Rezinkovia echinata	1720	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+JQ302311	Demospongiae	Heteroscleromorpha	Spongillida	Metaniidae	Corvomeyenia	Corvomeyenia sp. DVL-2012	1635	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+PP068995	Demospongiae	Heteroscleromorpha	Spongillida	Metaniidae	Corvomeyenia	Corvomeyenia everetti	1632	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+JN209966	Demospongiae	Heteroscleromorpha	Spongillida	Spongillidae	Ephydatia	Ephydatia fluviatilis	1601	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+EU237481	Demospongiae	Heteroscleromorpha	Spongillida	Spongillidae	Ephydatia	Ephydatia muelleri	1516	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+LT158504	Demospongiae	Heteroscleromorpha	Spongillida	Spongillidae	Ephydatia	Ephydatia muelleri	1516	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+ON734426	Demospongiae	Heteroscleromorpha	Spongillida	Spongillidae	Ephydatia	Ephydatia muelleri	1516	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+OZ179923	Demospongiae	Heteroscleromorpha	Spongillida	Spongillidae	Ephydatia	Ephydatia muelleri	1519	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+GU086203	Demospongiae	Heteroscleromorpha	Spongillida	Spongillidae	Eunapius	Eunapius subterraneus	1578	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+OY811994	Demospongiae	Heteroscleromorpha	Spongillida	Spongillidae	Eunapius	Eunapius fragilis	1623	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+KU759841	Demospongiae	Heteroscleromorpha	Spongillida	Spongillidae	Spongilla	Spongilla lacustris	1618	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+LT158503	Demospongiae	Heteroscleromorpha	Spongillida	Spongillidae	Spongilla	Spongilla lacustris	1612	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+OM729654	Demospongiae	Heteroscleromorpha	Spongillida	Spongillidae	Spongilla	Spongilla lacustris	1612	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+OX442438	Demospongiae	Heteroscleromorpha	Spongillida	Spongillidae	Spongilla	Spongilla lacustris	1613	AY320032	B	E	B	B	A	E1	E	E	B	A	A	E	BEBBAE1EEBAAE
+MK079940	Demospongiae	Heteroscleromorpha	Suberitida	NA	Homaxinella	Homaxinella balfourensis	1439	AY320032	B	D	B	B	A	B	B	E	B	E1	A	E	BDBBABBEBE1AE
+ON099442	Demospongiae	Heteroscleromorpha	Suberitida	NA	Terpios	Terpios hoshinota	1253	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+KX244759	Demospongiae	Heteroscleromorpha	Suberitida	Halichondriidae	Halichondria	Halichondria sp. XMU02_001_078	1364	AY320032	B	C	B	B	A	B	E	B	B	A	A	E	BCBBABEBBAAE
+MG267395	Demospongiae	Heteroscleromorpha	Suberitida	Halichondriidae	Halichondria	Halichondria okadai	1364	AY320032	B	C	B	B	A	B	E	B	B	A	A	E	BCBBABEBBAAE
+MH756603	Demospongiae	Heteroscleromorpha	Suberitida	Halichondriidae	Halichondria	Halichondria panicea	1206	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+MH756604	Demospongiae	Heteroscleromorpha	Suberitida	Halichondriidae	Halichondria	Halichondria panicea	1196	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+MK079945	Demospongiae	Heteroscleromorpha	Suberitida	Halichondriidae	Halichondria	Halichondria panicea	1207	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+MK105765	Demospongiae	Heteroscleromorpha	Suberitida	Halichondriidae	Halichondria	Halichondria sp. HK-2019	1207	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+OM729622	Demospongiae	Heteroscleromorpha	Suberitida	Halichondriidae	Halichondria	Halichondria panicea	1207	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+OY776077	Demospongiae	Heteroscleromorpha	Suberitida	Halichondriidae	Halichondria	Halichondria panicea	1207	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+OM729620	Demospongiae	Heteroscleromorpha	Suberitida	Halichondriidae	Hymeniacidon	Hymeniacidon perlevis	1368	AY320032	B	D	B	B	A	A	E	E	B	A	A	E	BDBBAAEEBAAE
+KF192342	Demospongiae	Heteroscleromorpha	Suberitida	Halichondriidae	Hymeniacidon	Hymeniacidon sinapium	1367	AY320032	B	D	B	B	A	A	E	E	B	A	A	E	BDBBAAEEBAAE
+EU237482	Demospongiae	Heteroscleromorpha	Suberitida	Halichondriidae	Topsentia	Topsentia ophiraphidites	1231	AY320032	B	C	B	B	A	A	E	B	B	A	A	E	BCBBAAEBBAAE
+MN547324	Demospongiae	Heteroscleromorpha	Suberitida	Suberitidae	Pseudosuberites	Pseudosuberites sp. CY-2021	1377	AY320032	B	B	B	B	A	B	E	B	B	A	A	E	BBBBABEBBAAE
+AM690374	Demospongiae	Heteroscleromorpha	Suberitida	Suberitidae	Suberites	Suberites domuncula	1832	AY320032	B	C	E	B	A	B	E	E	B	E2	A	E	BCEBABEEBE2AE
+OM729652	Demospongiae	Heteroscleromorpha	Suberitida	Suberitidae	Suberites	Suberites ficus	1826	AY320032	B	C	E	B	A	B	E	E	B	E2	A	E	BCEBABEEBE2AE
+OM729607	Demospongiae	Heteroscleromorpha	Tethyida	Hemiasterellidae	Adreus	Adreus fascicularis	1195	AY320032	B	B	B	B	A	A	B	A	B	A	A	E	BBBBAABABAAE
+OM729655	Demospongiae	Heteroscleromorpha	Tethyida	Hemiasterellidae	Stelligera	Stelligera stuposa	1270	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+LR862354	Demospongiae	Heteroscleromorpha	Tethyida	Tethyidae	Tethya	Tethya citrina	1219	AY320032	B	B	B	B	A	A	B	B	B	A	A	E	BBBBAABBBAAE
+LR880418	Demospongiae	Heteroscleromorpha	Tethyida	Tethyidae	Tethya	Tethya citrina	1219	AY320032	B	B	B	B	A	A	B	B	B	A	A	E	BBBBAABBBAAE
+AY320033	Demospongiae	Heteroscleromorpha	Tethyida	Tethyidae	Tethya	Tethya actinia	1242	AY320032	B	B	B	B	A	A	B	B	B	A	A	E	BBBBAABBBAAE
+KU748128	Demospongiae	Heteroscleromorpha	Tethyida	Tethyidae	Tethya	Tethya sp. XMU02001079	1253	AY320032	B	C	B	B	A	A	B	B	B	A	A	E	BCBBAABBBAAE
+LR862353	Demospongiae	Heteroscleromorpha	Tethyida	Tethyidae	Tethya	Tethya wilhelma	1233	AY320032	B	B	B	B	A	A	B	B	B	A	A	E	BBBBAABBBAAE
+LR862355	Demospongiae	Heteroscleromorpha	Tethyida	Tethyidae	Tethya	Tethya minuta	1241	AY320032	B	B	B	B	A	A	B	B	B	A	A	E	BBBBAABBBAAE
+LR862379	Demospongiae	Heteroscleromorpha	Tethyida	Tethyidae	Tethya	Tethya wilhelma	1233	AY320032	B	B	B	B	A	A	B	B	B	A	A	E	BBBBAABBBAAE
+LR877180	Demospongiae	Heteroscleromorpha	Tethyida	Tethyidae	Tethya	Tethya minuta	1241	AY320032	B	B	B	B	A	A	B	B	B	A	A	E	BBBBAABBBAAE
+OM729659	Demospongiae	Heteroscleromorpha	Tethyida	Tethyidae	Tethya	Tethya wilhelma	1233	AY320032	B	B	B	B	A	A	B	B	B	A	A	E	BBBBAABBBAAE
+OZ123608	Demospongiae	Heteroscleromorpha	Tethyida	Tethyidae	Tethya	Tethya californiana	1209	AY320032	B	B	B	B	A	A	B	B	B	A	A	E	BBBBAABBBAAE
+OM365392	Demospongiae	Heteroscleromorpha	Tetractinellida	NA	Leiodermatium	Leiodermatium sp. MNHN IP 2015-1283	1141	AY320032	B	B	B	B	A	A	B	B	B	A	A	A	BBBBAABBBAAA
+OM729658	Demospongiae	Heteroscleromorpha	Tetractinellida	NA	Leiodermatium	Leiodermatium sp. DVL-2023	1141	AY320032	B	B	B	B	A	A	B	B	B	A	A	A	BBBBAABBBAAA
+OM729616	Demospongiae	Heteroscleromorpha	Tetractinellida	Ancorinidae	Dercitus	Dercitus luteus	1187	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OZ180089	Demospongiae	Heteroscleromorpha	Tetractinellida	Ancorinidae	Rhabdastrella	Rhabdastrella globostellata	1233	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+MK079951	Demospongiae	Heteroscleromorpha	Tetractinellida	Ancorinidae	Stryphnus	Stryphnus fortis	1168	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+Corallistes_floreana	Demospongiae	Heteroscleromorpha	Tetractinellida	Corallistidae	Corallistes	Corallistes floreana	1232	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OM729632	Demospongiae	Heteroscleromorpha	Tetractinellida	Corallistidae	Neophrissospongia	Neophrissospongia sp. DVL-2023	1317	AY320032	B	D	B	B	A	A	B	B	B	B	A	E	BDBBAABBBBAE
+MK079944	Demospongiae	Heteroscleromorpha	Tetractinellida	Geodiidae	Geodia	Geodia atlantica	1248	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OM729640	Demospongiae	Heteroscleromorpha	Tetractinellida	Geodiidae	Geodia	Stelletta fibrosa	1226	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OX442400	Demospongiae	Heteroscleromorpha	Tetractinellida	Geodiidae	Geodia	Geodia barretti	1233	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+AY320032	Demospongiae	Heteroscleromorpha	Tetractinellida	Geodiidae	Geodia	Geodia neptuni	1244	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OZ181715	Demospongiae	Heteroscleromorpha	Tetractinellida	Pachastrellidae	Pachastrella	Pachastrella ovisternata	1270	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OM729641	Demospongiae	Heteroscleromorpha	Tetractinellida	Scleritodermidae	Microscleroderma	Microscleroderma sp. n. DVL-2023	1139	AY320032	B	B	B	B	A	A	B	B	B	A	A	A	BBBBAABBBAAA
+Cinachyrella_alloclada	Demospongiae	Heteroscleromorpha	Tetractinellida	Tetillidae	Cinachyrella	Cinachyrella alloclada	1230	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+EU237479	Demospongiae	Heteroscleromorpha	Tetractinellida	Tetillidae	Cinachyrella	Cinachyrella kuekenthali	1219	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+Craniella_wolfi	Demospongiae	Heteroscleromorpha	Tetractinellida	Tetillidae	Craniella	Craniella wolfi	1230	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OZ019967	Demospongiae	Heteroscleromorpha	Tetractinellida	Theonellidae	Theonella	Theonella swinhoei	1238	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+KM362735	Demospongiae	Heteroscleromorpha	Tetractinellida	Vulcanellidae	Poecillastra	Poecillastra laminaris	1265	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+MK079950	Demospongiae	Heteroscleromorpha	Tetractinellida	Vulcanellidae	Poecillastra	Poecillastra compressa	1264	AY320032	B	D	B	B	A	A	B	B	B	A	A	E	BDBBAABBBAAE
+OM729670	Demospongiae	Verongimorpha	Verongiida	Aplysinidae	Aiolochroia	Aiolochroia crassa	1298	AY320032	E	B	B	B	A	B	B	B	B	A	A	E	EBBBABBBBAAE
+OZ181693	Demospongiae	Verongimorpha	Verongiida	Aplysinidae	Aiolochroia	Aiolochroia crassa	1298	AY320032	E	B	B	B	A	B	B	B	B	A	A	E	EBBBABBBBAAE
+EU237476	Demospongiae	Verongimorpha	Verongiida	Aplysinidae	Aplysina	Aplysina fulva	1295	AY320032	E	B	B	B	A	A	B	B	B	A	A	E	EBBBAABBBAAE
+EU518938	Demospongiae	Verongimorpha	Verongiida	Aplysinidae	Aplysina	Aplysina cauliformis	1295	AY320032	E	B	B	B	A	A	B	B	B	A	A	E	EBBBAABBBAAE
+MN082378	Demospongiae	Verongimorpha	Verongiida	Aplysinidae	Aplysina	Aplysina gerardogreeni	1295	AY320032	E	B	B	B	A	A	B	B	B	A	A	E	EBBBAABBBAAE
+OX465055	Demospongiae	Verongimorpha	Verongiida	Aplysinidae	Aplysina	Aplysina aerophoba	1295	AY320032	E	B	B	B	A	A	B	B	B	A	A	E	EBBBAABBBAAE
+OZ184964	Demospongiae	Verongimorpha	Verongiida	Aplysinidae	Aplysina	Aplysina insularis	1295	AY320032	E	B	B	B	A	A	B	B	B	A	A	E	EBBBAABBBAAE
+OM729668	Demospongiae	Verongimorpha	Verongiida	Ianthellidae	Hexadella	Hexadella pruvoti	1301	AY320032	E	B	B	B	A	B	B	B	B	E1	A	E	EBBBABBBBE1AE
+OZ025891	Demospongiae	Verongimorpha	Verongiida	Ianthellidae	Ianthella	Ianthella basta	1388	AY320032	E	D	B	B	B	A	B	B	B	E1	A	E	EDBBBABBBE1AE
+OM729669	Demospongiae	Verongimorpha	Verongiida	Pseudoceratinidae	NA	Pseudoceratinidae sp. n. DVL-2023	1289	AY320032	E	B	B	B	A	A	B	B	B	A	A	E	EBBBAABBBAAE
+KM035411	Hexactinellida	Amphidiscophora	Amphidiscosida	Hyalonematidae	Lophophysema	Lophophysema eversa	952	KM580074	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+KM580074	Hexactinellida	Amphidiscophora	Amphidiscosida	Hyalonematidae	Tabachnickia	Tabachnickia sp. DVL-2014	969	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+OY725507	Hexactinellida	Hexasterophora	Hexactinosida	Aphrocallistidae	Aphrocallistes	Aphrocallistes beatrix	909	EU000309	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+EU000309	Hexactinellida	Hexasterophora	Hexactinosida	Aphrocallistidae	Aphrocallistes	Aphrocallistes vastus	885	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+EF537576	Hexactinellida	Hexasterophora	Hexactinosida	Dactylocalycidae	Iphiteon	Iphiteon panicea	951	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+KM580070	Hexactinellida	Hexasterophora	Hexactinosida	Euretidae	NA	Euretidae gen. sp. DVL-2014	940	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+OZ177758	Hexactinellida	Hexasterophora	Lyssacinosida	Euplectellidae	Bolosoma	Bolosoma cyanae	853	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+KJ634156	Hexactinellida	Hexasterophora	Lyssacinosida	Euplectellidae	Docosaccus	Docosaccus maculatus	894	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+KM580071	Hexactinellida	Hexasterophora	Lyssacinosida	Euplectellidae	Hertwigia	Hertwigia falcifera	905	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+KR709158	Hexactinellida	Hexasterophora	Lyssacinosida	Leucopsacidae	Oopsacas	Oopsacas minuta	914	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+KM580072	Hexactinellida	Hexasterophora	Lyssacinosida	Leucopsacidae	Oopsacas	Oopsacas minuta	914	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+KJ634155	Hexactinellida	Hexasterophora	Lyssacinosida	Rossellidae	Bathydorus	Bathydorus laniger	902	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+ON764414	Hexactinellida	Hexasterophora	Lyssacinosida	Rossellidae	Caulophacus	Caulophacus iocasicus	937	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+KM580073	Hexactinellida	Hexasterophora	Lyssacinosida	Rossellidae	NA	Rossellidae sp. DVL-2014	913	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+EF537577	Hexactinellida	Hexasterophora	Lyssacinosida	Rossellidae	Sympagella	Sympagella nux	914	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
+KM580075	Hexactinellida	Hexasterophora	Lyssacinosida	Rossellidae	Vazella	Vazella pourtalesii	914	EF537576	A	A	A	A	A	A	A	A	A	A	A	E	AAAAAAAAAAAE
