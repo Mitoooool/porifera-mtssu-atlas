@@ -7,9 +7,9 @@
   <meta name="theme-color" content="#143e43">
   <title>Porifera mtSSU Atlas · 海绵线粒体rRNA结构图谱</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261013-search-citation">
   <script src="data/records.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=20261013-search-citation" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳至主要内容</a>
@@ -17,7 +17,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a href="#top" class="brand" aria-label="Porifera mtSSU Atlas 首页"><span class="brand-mark" aria-hidden="true">P<span>·</span></span><span>PORIFERA<span class="brand-sub">mtSSU STRUCTURE ATLAS</span></span></a>
-      <nav aria-label="主导航"><a href="#atlas">图版</a><a href="#data">数据</a><a href="#types">结构类型</a><a href="#downloads">下载</a><a class="lab-link" href="https://mitoooool.github.io/" target="_blank" rel="noopener noreferrer">LISEB ↗<span class="sr-only">（新标签页）</span></a></nav>
+      <nav aria-label="主导航"><a href="#atlas">图版</a><a href="#data">数据</a><a href="#types">结构类型</a><a href="#downloads">下载</a><a href="#citation">引用</a><a class="lab-link" href="https://mitoooool.github.io/" target="_blank" rel="noopener noreferrer">LISEB ↗<span class="sr-only">（新标签页）</span></a></nav>
     </div>
   </header>
   <main id="main">
@@ -28,7 +28,7 @@
         <p class="hero-english" lang="en">A shared scaffold. Diverse local structures.</p>
         <p class="hero-description">在共同的同源结构坐标中，浏览海绵线粒体小亚基rRNA的保守骨架与局部变异。从科研图版进入记录、序列和结构类型。</p>
         <div class="hero-actions"><a class="button primary" href="#data">浏览数据 <span aria-hidden="true">↓</span></a><a class="button secondary" href="#atlas">探索结构图版</a></div>
-        <p class="paper-status"><span class="status-dot" aria-hidden="true"></span> bioRxiv 预印本 · v1 · 30 August 2026 <a href="#publication">论文与引用 ↗</a></p>
+        <p class="paper-status"><span class="status-dot" aria-hidden="true"></span> bioRxiv 预印本 · v1 · 30 August 2026 <a href="#citation">复制论文引用 ↗</a></p>
       </div>
       <figure class="hero-figure"><div class="figure-topline"><span>STRUCTURAL MAP</span><span>FIG. 2a / DETAIL</span></div><img src="assets/structure-map.webp" alt="论文图2a的局部：保守骨架周围不同子结构的模式示意" width="900" height="958"><figcaption><span>保守骨架中的局部变化</span><button class="text-button" data-figure="2" type="button">查看完整图版 ↗</button></figcaption></figure>
     </section>
@@ -58,10 +58,14 @@
       <div class="section-heading"><div><p class="eyebrow">02 / DATA EXPLORER</p><h2 id="data-title">浏览记录与分类群</h2></div><p>源于补充表S2b与S2c。记录数不等同物种数。</p></div>
       <div class="class-grid" id="class-grid" role="group" aria-label="按纲筛选"></div>
       <form class="data-controls" id="filters" role="search" aria-label="检索项目记录">
-        <label class="search-field"><span>检索记录</span><input type="search" id="search" placeholder="输入登录号、物种、科或组合类型" autocomplete="off"></label>
-        <label><span>目</span><select id="order"><option value="">全部目</option></select></label>
-        <label><span>排序</span><select id="sort"><option value="default">源表顺序</option><option value="length-up">长度从短到长</option><option value="length-down">长度从长到短</option><option value="species">物种名称</option></select></label>
+        <p class="filter-heading">关键词搜索与分类筛选</p>
+        <label class="query-field"><span>检索字段</span><select id="query-field"><option value="all">全部字段</option><option value="accession">登录号</option><option value="species">物种</option><option value="genus">属</option><option value="family">科</option><option value="order">目</option><option value="class">纲</option><option value="composite">组合类型</option></select></label>
+        <label class="search-field"><span>关键词搜索</span><input type="search" id="search" placeholder="例如 Agelas、EU237475 或物种名称" autocomplete="off" maxlength="160" aria-describedby="filter-help"></label>
+        <label class="genus-field"><span>属名精确筛选</span><select id="genus"><option value="">全部属</option></select></label>
+        <label class="order-field"><span>目</span><select id="order"><option value="">全部目</option></select></label>
+        <label class="sort-field"><span>排序</span><select id="sort"><option value="default">源表顺序</option><option value="length-up">长度从短到长</option><option value="length-down">长度从长到短</option><option value="species">物种名称</option></select></label>
         <button class="reset-button" type="reset">清除筛选</button>
+        <p class="filter-help" id="filter-help">输入即筛选，不区分大小写。只看Agelas属，请在“属名精确筛选”中选择Agelas；全部字段搜索也会匹配Agelasida等目名。上方纲筛选、目、属与关键词可组合使用。</p>
       </form>
       <div class="table-topline"><p id="result-count" role="status" aria-live="polite">正在载入216条记录…</p><button id="export-filtered" class="text-button" type="button">导出当前结果 TSV ↗</button></div>
       <div class="table-scroll" tabindex="0" aria-label="记录表，窄屏可横向滚动"><table><caption class="sr-only">最终分析数据的登录号、物种、分类群、长度及组合类型</caption><thead><tr><th scope="col">登录号</th><th scope="col">物种</th><th scope="col">目 / 纲</th><th scope="col" class="numeric">长度 <small>nt</small></th><th scope="col">组合类型</th><th scope="col"><span class="sr-only">记录详情</span></th></tr></thead><tbody id="record-rows"></tbody></table></div>
@@ -86,6 +90,23 @@
     </section>
 
     <section class="publication-section" id="publication" aria-labelledby="publication-title"><div class="wrap publication-layout"><div><p class="eyebrow">PUBLICATION / bioRxiv v1</p><h2 id="publication-title" lang="en">Secondary Structure Diversity of the Mitochondrial Small-Subunit rRNA in Porifera</h2><p class="authors" lang="en">Zhou Yunqian, Gong Lin, Niu Gengyun, Shi Haihe, Li Xinzheng, Robin Gutell &amp; Wei Meicai</p><p class="quiet">公开预印本，未经同行评审。结构模型与类型矩阵用于比较描述，不直接建立功能、祖先状态或适应性结论。</p><a class="text-link" href="https://doi.org/10.64898/2026.08.28.747467" target="_blank" rel="noopener noreferrer">阅读预印本 ↗<span class="sr-only">（新标签页）</span></a></div><aside><p class="eyebrow">PROJECT / LISEB</p><h3>结构、数据与证据<br>保持可追溯</h3><p>图版和数据以bioRxiv v1提交材料为来源。待核对项已标注，原始下载文件保留，网页派生数据与原始模型分别说明。</p><a class="text-link" href="https://mitoooool.github.io/" target="_blank" rel="noopener noreferrer">实验室主页 ↗<span class="sr-only">（新标签页）</span></a></aside></div></section>
+    <section class="citation-section section wrap" id="citation" aria-labelledby="citation-title">
+      <div class="section-heading"><div><p class="eyebrow">05 / CITATION</p><h2 id="citation-title">引用这项研究</h2></div><p>bioRxiv预印本 · Version 1 · 2026-08-30 · 未经同行评审</p></div>
+      <div class="citation-card">
+        <div class="citation-toolbar"><div class="citation-formats" role="group" aria-label="引用格式"><button type="button" data-citation-format="text" aria-pressed="true">纯文本</button><button type="button" data-citation-format="bibtex" aria-pressed="false">BibTeX</button></div><button class="button primary" id="copy-citation" type="button">复制引用</button></div>
+        <pre id="citation-text" tabindex="0" aria-label="当前引用文本，支持选择复制">Zhou, Y., Gong, L., Niu, G., Shi, H., Li, X., Gutell, R., &amp; Wei, M. (2026). Secondary Structure Diversity of the Mitochondrial Small-Subunit rRNA in Porifera. bioRxiv, Version 1 [Preprint]. https://doi.org/10.64898/2026.08.28.747467</pre>
+        <template id="citation-bibtex">@article{Zhou2026PoriferaMtSSU,
+  author = {Zhou, Yunqian and Gong, Lin and Niu, Gengyun and Shi, Haihe and Li, Xinzheng and Gutell, Robin and Wei, Meicai},
+  title = {Secondary Structure Diversity of the Mitochondrial Small-Subunit {rRNA} in {Porifera}},
+  journal = {bioRxiv},
+  year = {2026},
+  doi = {10.64898/2026.08.28.747467},
+  url = {https://doi.org/10.64898/2026.08.28.747467},
+  note = {Version 1; posted 30 August 2026; preprint, not peer reviewed}
+}</template>
+        <div class="citation-bottom"><p id="citation-status" role="status" aria-live="polite">请选择格式后复制，也可直接下载BibTeX文件。</p><a class="text-link" href="data/porifera-mtssu-v1.bib" download>下载 .bib 文件 ↓</a></div>
+      </div>
+    </section>
   </main>
   <footer class="wrap footer"><span>Porifera mtSSU Atlas <span class="footer-divider">/</span> LISEB</span><span>数据版本 bioRxiv v1 · 网站更新 2026.10.13</span></footer>
 

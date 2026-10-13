@@ -6,6 +6,12 @@
 
 实验室网站：https://mitoooool.github.io/
 
+## 数据浏览与引用
+
+关键词支持全部字段或指定登录号、物种、属、科、目、纲和组合类型，不区分大小写；属名下拉框精确匹配，并可与纲、目和关键词联合筛选。搜索Agelas的全部字段模式会同时匹配Agelasida等目名，限定属字段或选择Agelas属即可排除其他属。目与属选项依据上游分类筛选更新，清除筛选恢复全部记录；导出TSV始终对应当前结果。
+
+Citation区域提供纯文本和BibTeX切换、一键复制以及.bib下载，明确标注预印本、v1和DOI。自动复制不可用时支持传统复制回退；若浏览器仍拒绝复制，会选中引用文本并提示手动复制。
+
 ## 论文与来源
 
 Zhou Yunqian, Gong Lin, Niu Gengyun, Shi Haihe, Li Xinzheng, Robin Gutell & Wei Meicai. *Secondary Structure Diversity of the Mitochondrial Small-Subunit rRNA in Porifera*. bioRxiv v1, 2026-08-30. https://doi.org/10.64898/2026.08.28.747467

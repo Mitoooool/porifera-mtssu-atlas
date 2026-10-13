@@ -3,8 +3,33 @@
   const data = window.PORIFERA_DATA;
   const byId = id => document.getElementById(id);
   const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const citationSources={text:byId('citation-text').textContent.trim(),bibtex:byId('citation-bibtex').content.textContent.trim()};
+  let citationFormat='text';
+  document.querySelectorAll('[data-citation-format]').forEach(button=>button.addEventListener('click',()=>{
+    citationFormat=button.dataset.citationFormat;
+    byId('citation-text').textContent=citationSources[citationFormat];
+    document.querySelectorAll('[data-citation-format]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+    byId('citation-status').textContent='当前格式：'+(citationFormat==='bibtex'?'BibTeX':'纯文本')+'。点击“复制引用”即可复制。';
+  }));
+  byId('copy-citation').addEventListener('click',async()=>{
+    const value=citationSources[citationFormat];
+    const formatName=citationFormat==='bibtex'?'BibTeX':'纯文本';
+    let copied=false;
+    try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(value);copied=true;}}catch{/* Try the local/manual fallback below. */}
+    if(!copied){
+      const field=document.createElement('textarea');field.value=value;field.setAttribute('readonly','');
+      field.style.cssText='position:fixed;left:-9999px;top:0';document.body.appendChild(field);field.select();
+      try{copied=document.execCommand('copy');}catch{/* A blocked clipboard is handled without claiming success. */}
+      field.remove();byId('copy-citation').focus({preventScroll:true});
+    }
+    if(!copied){
+      const selection=window.getSelection(),range=document.createRange();range.selectNodeContents(byId('citation-text'));
+      selection.removeAllRanges();selection.addRange(range);byId('citation-text').focus({preventScroll:true});
+    }
+    byId('citation-status').textContent=copied?'已复制'+formatName+'引用。':'浏览器未允许自动复制。引用文本已选中，请按Ctrl+C（Mac按⌘C）复制，或下载.bib文件。';
+  });
   if (!data) { byId('result-count').textContent = '数据未能载入，请刷新或使用下方完整补充表。'; return; }
-  const state = { className:'', order:'', query:'', sort:'default', page:0, pageSize:8, segment:0, gallery:1, zoom:1 };
+  const state = { className:'', order:'', genus:'', queryField:'all', query:'', sort:'default', page:0, pageSize:8, segment:0, gallery:1, zoom:1 };
   const names = Object.fromEntries(data.classes.map(c => [c.class,c.name]));
   const headers=['Accession','Class','Subclass','Order','Family','Genus','Species','Length_nt','Reference_template',...data.segments,'Composite_type'];
   const tsvRows = records => [headers, ...records.map(r => [r.accession,r.class,r.subclass,r.order,r.family,r.genus,r.species,r.length,r.template,...r.types,r.composite])].map(row => row.map(value => String(value ?? '').replace(/[\t\r\n]/g,' ')).join('\t')).join('\n')+'\n';
@@ -15,8 +40,9 @@
     setTimeout(() => URL.revokeObjectURL(url),1000);
   }
   function selectedRecords() {
-    const query=state.query.toLocaleLowerCase().trim();
-    let selected=data.records.filter(r => (!state.className || r.class===state.className) && (!state.order || r.order===state.order) && (!query || [r.accession,r.species,r.family,r.genus,r.order,r.class,r.composite].join(' ').toLocaleLowerCase().includes(query)));
+    const normalize=value=>String(value??'').toLowerCase().trim().replace(/\s+/g,' ');
+    const query=normalize(state.query);
+    let selected=data.records.filter(r => (!state.className || r.class===state.className) && (!state.order || r.order===state.order) && (!state.genus || r.genus===state.genus) && (!query || normalize(state.queryField==='all'?[r.accession,r.species,r.family,r.genus,r.order,r.class,r.composite].join(' '):r[state.queryField]).includes(query)));
     if(state.sort==='length-up') selected.sort((a,b)=>a.length-b.length);
     if(state.sort==='length-down') selected.sort((a,b)=>b.length-a.length);
     if(state.sort==='species') selected.sort((a,b)=>a.species.localeCompare(b.species));
@@ -35,7 +61,7 @@
     state.page=Math.min(state.page,pages-1);
     const start=state.page*state.pageSize;
     const visible=selected.slice(start,start+state.pageSize);
-    byId('result-count').textContent=`显示 ${selected.length} / ${data.records.length} 条记录${state.className ? ' · '+names[state.className]:''}`;
+    byId('result-count').textContent=`显示 ${selected.length} / ${data.records.length} 条记录${state.className ? ' · '+names[state.className]:''}${state.order?' · 目 '+state.order:''}${state.genus?' · 属 '+state.genus:''}`;
     byId('record-rows').innerHTML=visible.map(r=>`<tr><td><span class="accession">${escape(r.accession)}</span>${r.sequenceMatch ? '':'<small class="qc-flag">来源待核对</small>'}</td><td class="species">${escape(r.species)}</td><td>${escape(r.order)}<small>${escape(names[r.class])}</small></td><td class="numeric">${r.length.toLocaleString('en-US')}</td><td class="composite">${escape(r.composite)}</td><td><button type="button" class="record-button" data-record="${escape(r.accession)}" aria-label="查看${escape(r.species)}记录详情">详情 ↗</button></td></tr>`).join('') || '<tr><td colspan="6">没有匹配记录。请调整检索词或清除筛选。</td></tr>';
     byId('page-info').textContent=selected.length ? `${start+1}–${Math.min(start+state.pageSize,selected.length)} / ${selected.length} · 第 ${state.page+1} / ${pages} 页` : '0 条记录';
     byId('previous').disabled=state.page===0;
@@ -43,17 +69,30 @@
     byId('export-filtered').disabled=selected.length===0;
     document.querySelectorAll('[data-class]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.class===state.className)));
   }
+  function populateGenera(){
+    const selected=data.records.filter(r=>(!state.className||r.class===state.className)&&(!state.order||r.order===state.order));
+    const genera=[...new Set(selected.map(r=>r.genus).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+    if(!genera.includes(state.genus))state.genus='';
+    byId('genus').innerHTML='<option value="">全部属</option>'+genera.map(genus=>`<option value="${escape(genus)}">${escape(genus)}</option>`).join('');
+    byId('genus').value=state.genus;
+  }
+  function updateSearchPlaceholder(){
+    const examples={all:'例如 Agelas、EU237475 或物种名称',accession:'例如 EU237475',species:'例如 Agelas schmidtii',genus:'例如 Agelas（仅搜索属字段）',family:'输入科的学名',order:'例如 Agelasida',class:'例如 Demospongiae',composite:'输入组合类型编码'};
+    byId('search').placeholder=examples[state.queryField];
+  }
   byId('class-grid').innerHTML=data.classes.map(c=>`<button type="button" class="class-card" data-class="${escape(c.class)}" aria-pressed="false" aria-label="筛选${escape(c.name)}，${c.records}条记录；再次点击取消筛选"><span class="class-name">${escape(c.name)}</span><span class="class-count">${c.records}</span><span class="class-en" lang="en">${escape(c.class)}</span><span class="class-range">${c.min.toLocaleString()}${c.min===c.max?'':'–'+c.max.toLocaleString()} nt · ${c.composites}种组合类型</span></button>`).join('');
   byId('class-grid').addEventListener('click',event=>{
     const button=event.target.closest('[data-class]'); if(!button)return;
     state.className=state.className===button.dataset.class ? '' : button.dataset.class;
-    state.order=''; state.page=0; populateOrders(); renderRecords();
+    state.order=''; state.page=0; populateOrders(); populateGenera(); renderRecords();
   });
   byId('search').addEventListener('input',()=>{state.query=byId('search').value;state.page=0;renderRecords();});
-  byId('order').addEventListener('change',()=>{state.order=byId('order').value;state.page=0;renderRecords();});
+  byId('query-field').addEventListener('change',()=>{state.queryField=byId('query-field').value;state.page=0;updateSearchPlaceholder();renderRecords();});
+  byId('genus').addEventListener('change',()=>{state.genus=byId('genus').value;state.page=0;renderRecords();});
+  byId('order').addEventListener('change',()=>{state.order=byId('order').value;state.page=0;populateGenera();renderRecords();});
   byId('sort').addEventListener('change',()=>{state.sort=byId('sort').value;state.page=0;renderRecords();});
   byId('filters').addEventListener('submit',event=>event.preventDefault());
-  byId('filters').addEventListener('reset',()=>{state.className='';state.order='';state.query='';state.sort='default';state.page=0;populateOrders();renderRecords();});
+  byId('filters').addEventListener('reset',()=>{state.className='';state.order='';state.genus='';state.queryField='all';state.query='';state.sort='default';state.page=0;populateOrders();populateGenera();updateSearchPlaceholder();renderRecords();});
   byId('previous').addEventListener('click',()=>{state.page--;renderRecords();});
   byId('next').addEventListener('click',()=>{state.page++;renderRecords();});
   byId('export-filtered').addEventListener('click',()=>saveText('porifera-filtered-records.tsv',tsvRows(selectedRecords()),'text/tab-separated-values;charset=utf-8'));
@@ -127,5 +166,5 @@
     if(r.sequenceMatch)byId('download-record-structure').addEventListener('click',()=>saveText(r.accession+'.str',`>${r.accession}\n${r.structureSequence}\n${r.structure}\n`));
   }
   byId('record-rows').addEventListener('click',event=>{const button=event.target.closest('[data-record]');if(button)openRecord(button.dataset.record);});
-  populateOrders();renderRecords();renderSegment(0);
+  populateOrders();populateGenera();renderRecords();renderSegment(0);
 })();
