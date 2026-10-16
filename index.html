@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles.css?v=20261014-data-versions">
   <script src="data/records.js" defer></script>
   <script src="app.js?v=20261013-search-citation" defer></script>
-</head>
+<link rel="stylesheet" href="substructures.css"><script src="substructures_data.js" defer></script><script src="substructures.js" defer></script></head>
 <body>
   <a class="skip-link" href="#main">跳至主要内容</a>
   <div class="preview-strip"><span class="wrap">海绵线粒体rRNA · 结构与数据 <span>论文数据快照：bioRxiv v1</span></span></div>
@@ -79,8 +79,23 @@
     </section>
 
     <section class="types-section section" id="types" aria-labelledby="types-title"><div class="wrap">
-      <div class="section-heading"><div><p class="eyebrow">03 / STRUCTURAL TYPES</p><h2 id="types-title">十二个子结构，各有变化</h2></div><p>选择子结构，查看216条记录中的类型分布。</p></div>
-      <div class="type-layout"><div class="segment-grid" id="segment-grid" role="group" aria-label="选择高变子结构"></div><div class="type-detail"><div class="type-title-row"><h3 id="segment-title">H61</h3><span id="segment-count"></span></div><div id="type-bars"></div><p class="quiet">类型字母只在当前子结构内有意义。不同子结构的“A”不表示同一种结构。</p></div></div>
+      <div class="section-heading"><div><p class="eyebrow">03 / STRUCTURAL TYPES</p><h2 id="types-title">十二个子结构，各有变化</h2></div><p>选择子结构，对照类型形态与216条记录中的类型占比。</p></div>
+      <div class="type-layout">
+  <div class="segment-grid" id="segment-grid" role="group" aria-label="选择高变子结构"></div>
+  <div class="substructure-content">
+    <figure class="substructure-figure">
+      <div class="substructure-figure-head"><span id="substructure-figure-label">H61 · 类型示意</span><div class="substructure-view-switch" role="group" aria-label="切换结构图视图"><button type="button" data-substructure-mode="types" aria-pressed="true">类型示意</button><button type="button" data-substructure-mode="context" aria-pressed="false">结构位置</button></div></div>
+      <button type="button" class="substructure-open" id="substructure-open" aria-haspopup="dialog"><img id="substructure-image" src="assets/substructures/H61-types.png" alt="H61局部结构类型示意" width="261" height="291"><span>点击放大 ↗</span></button>
+      <figcaption class="substructure-caption" id="substructure-caption"></figcaption>
+    </figure>
+    <div class="type-detail">
+      <div class="type-title-row"><h3 id="segment-title">H61</h3><span id="segment-count"></span></div>
+      <p class="types-denominator">论文数据快照 · 216条记录</p>
+      <div id="type-bars"></div>
+      <p class="quiet">类型字母仅在当前子结构内有意义，不同子结构的“A”不表示同一种结构。</p>
+    </div>
+  </div>
+</div>
     </div></section>
 
     <section class="downloads-section section wrap" id="downloads" aria-labelledby="downloads-title">
@@ -112,9 +127,9 @@
       </div>
     </section>
   </main>
-  <footer class="wrap footer"><span>Porifera mtSSU Atlas <span class="footer-divider">/</span> LISEB</span><span>论文数据快照 bioRxiv v1 · 网站更新 2026.10.14</span></footer>
+  <footer class="wrap footer"><span>Porifera mtSSU Atlas <span class="footer-divider">/</span> LISEB</span><span>论文数据快照 bioRxiv v1 · 网站更新 2026.10.15</span></footer>
 
   <dialog id="figure-dialog" class="figure-dialog" aria-labelledby="figure-modal-title"><div class="modal-toolbar"><h2 id="figure-modal-title">科研图版</h2><div class="zoom-controls"><button type="button" id="zoom-out" aria-label="缩小图版">−</button><output id="zoom-label">100%</output><button type="button" id="zoom-in" aria-label="放大图版">＋</button><button type="button" id="zoom-reset">适应窗口</button></div><button type="button" class="close-button" data-close="figure-dialog" aria-label="关闭图版">×</button></div><div class="zoom-viewport" id="zoom-viewport"><img id="modal-figure" src="assets/figure-1.png" alt="当前科研图版"></div><p class="modal-footnote">可放大并滚动查看细节；按Esc关闭。</p></dialog>
   <dialog id="record-dialog" class="record-dialog" aria-labelledby="record-title"><div class="modal-toolbar"><div><p class="eyebrow" id="record-accession"></p><h2 id="record-title"></h2></div><button type="button" class="close-button" data-close="record-dialog" aria-label="关闭记录">×</button></div><div class="record-content" id="record-content"></div></dialog>
-</body>
+<dialog id="substructure-dialog" class="figure-dialog" aria-labelledby="substructure-modal-title"><div class="modal-toolbar"><h2 id="substructure-modal-title">子结构类型示意</h2><div class="zoom-controls"><button type="button" id="substructure-zoom-out" aria-label="缩小子结构图">−</button><output id="substructure-zoom-label">100%</output><button type="button" id="substructure-zoom-in" aria-label="放大子结构图">＋</button><button type="button" id="substructure-zoom-reset">适应窗口</button></div><button type="button" class="close-button" id="substructure-close" aria-label="关闭子结构图">×</button></div><div class="zoom-viewport" id="substructure-zoom-viewport"><img id="substructure-modal-image" alt="当前子结构图"></div><p class="modal-footnote" id="substructure-modal-caption"></p></dialog></body>
 </html>
