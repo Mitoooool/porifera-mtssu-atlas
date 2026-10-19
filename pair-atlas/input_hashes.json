@@ -21,11 +21,19 @@
   },
   "coordinates": {
     "filename": "layout_coordinates.tsv",
-    "sha256": "82752aff4570923fec9e22357d78b604681d003ae29f6e518f475f8e84ad6f18"
+    "sha256": "6f4fc43ea2baf117d41279f1048f10ecdae1cd4c2abb75c5aec7f1854e253f00"
   },
   "segments": {
     "filename": "EU237490.st",
     "sha256": "96a7aba40f112fd2dd798c5acee9c47bb5d7614973cc231ed6f27e6d2a6fc504"
+  },
+  "helix_names": {
+    "filename": "Helix occupancy.xlsx",
+    "sha256": "4b442aeeb9fd111829ef11a5ecf8027e921f62e67f0084a0ef73e68cc86498d7"
+  },
+  "layout_style_reference": {
+    "filename": "Figure 1.png",
+    "sha256": "01cace3904c0b4c4619998036ad45d6fed28551eff4e0c454badc8b8c068823d"
   },
   "reference_png": {
     "filename": "CRW_reference_original.png",

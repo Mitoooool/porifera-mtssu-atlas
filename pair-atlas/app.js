@@ -6,8 +6,9 @@ const pct=(n,d=197)=>d?(100*n/d).toFixed(2)+"%":"—";
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 const pos=new Map(D.positions.map(r=>[r.pos,r])), colPos=new Map(D.positions.filter(r=>r.col).map(r=>[r.col,r.pos]));
 const atPair=new Map(), colours={WC:"#008877",GU:"#66a8b8",other:"#bc7340",one_gap:"#8c98a2",two_gap:"#d2dce2",ambiguous:"#8b70ae"};
+const segmentNames=new Map(D.segments.map(s=>[s.id,s.crw]));
 D.pairs.forEach(r=>{atPair.set(r.source_left,r);atPair.set(r.source_right,r);});
-const sourceSegment=p=>{const r=pos.get(p);return r?.segment?`Seg${String(r.segment[0]).padStart(2,"0")}-${r.segment[1]}`:"连接/环区（未归Seg）";};
+const sourceSegment=p=>{const r=pos.get(p);return r?.segment?`Seg${String(r.segment[0]).padStart(2,"0")}-${r.segment[1]} · ${segmentNames.get(r.segment[0])}`:"连接/环区（未归Seg）";};
 const pairName=r=>r?`P${String(r.id).padStart(3,"0")}`:"无模板配对";
 const centre=D.rows.find(r=>r.accession==="EU237490");
 const sortedRows=[centre,...D.rows.filter(r=>r!==centre)];
@@ -29,10 +30,10 @@ function download(name,text){
 }
 function segmentOptions(){
   D.segments.forEach(s=>{
-    const label=`${s.label} · ${s.pair_count}对 · ${s.left_start}–${s.left_end} / ${s.right_start}–${s.right_end}`;
+    const label=`${s.crw} / ${s.label} · ${s.pair_count}对 · ${s.left_start}–${s.left_end} / ${s.right_start}–${s.right_end}`;
     for(const id of ["figureSegment","pairSegment"]){const o=new Option(label,String(s.id));$(id).appendChild(o);}
-    $("segmentJump").appendChild(new Option(s.label+" · 左臂 "+s.left_start+"–"+s.left_end,s.id+"L"));
-    $("segmentJump").appendChild(new Option(s.label+" · 右臂 "+s.right_start+"–"+s.right_end,s.id+"R"));
+    $("segmentJump").appendChild(new Option(s.crw+" / "+s.label+" · 左臂 "+s.left_start+"–"+s.left_end,s.id+"L"));
+    $("segmentJump").appendChild(new Option(s.crw+" / "+s.label+" · 右臂 "+s.right_start+"–"+s.right_end,s.id+"R"));
   });
   [...new Set(D.rows.map(r=>r.group))].sort().forEach(g=>$("groupFilter").appendChild(new Option(g,g)));
 }
@@ -77,12 +78,17 @@ function conservationLayer(){
     circle.setAttribute("stroke",visible&&nt.dataset.variant==="true"?"#8546b5":"none");
   });
 }
+function annotationLayer(){
+  const mode=$("annotationLayer").value;
+  $("helixLabels").style.display=mode==="all"||mode==="helix"?"":"none";
+  $("positionLabels").style.display=mode==="all"||mode==="number"?"":"none";
+}
 function details(){
   $("alignmentDetail").removeAttribute("role");
   const r=selectedSource?pos.get(selectedSource):null;
   const info=r?`源位置 <b>${r.pos} ${r.base}</b> · ${sourceSegment(r.pos)} · bpRNA类别 ${r.kind} · ${r.col?`原矩阵列 <b>${r.col}</b>`:"未进入原矩阵"}`:
     `原矩阵列 <b>${selectedCol}</b> · 中心样本为gap · ${segmentAtColumn(selectedCol).full}`;
-  const pairInfo=currentPair?`<br>${pairName(currentPair)} · Seg${String(currentPair.segment).padStart(2,"0")} · 源位置 ${currentPair.source_left} ↔ ${currentPair.source_right} · 原矩阵列 ${currentPair.col_left} ↔ ${currentPair.col_right} · 模板 ${currentPair.template} · WC+GU ${currentPair.wc_gu}/197（${pct(currentPair.wc_gu)}）`:"<br>当前中心位点不属于341个模板配对；单列窗口仍显示原矩阵。";
+  const pairInfo=currentPair?`<br>${pairName(currentPair)} · ${segmentNames.get(currentPair.segment)} / Seg${String(currentPair.segment).padStart(2,"0")} · 源位置 ${currentPair.source_left} ↔ ${currentPair.source_right} · 原矩阵列 ${currentPair.col_left} ↔ ${currentPair.col_right} · 模板 ${currentPair.template} · WC+GU ${currentPair.wc_gu}/197（${pct(currentPair.wc_gu)}）`:"<br>当前中心位点不属于341个模板配对；单列窗口仍显示原矩阵。";
   const conservation=r?.highlight?`<br>${r.highlight==="strict"?"青绿 · 全197条完全一致":"金黄 · ≥95%且不足100%一致"} · 多数 ${r.majority} ${r.majority_count}/197（${pct(r.majority_count)}）${r.variant?` · <b>中心实际为${r.base}，是少数碱基；紫圈标记，原序列不变</b>`:""}`:"";
   const text=info+pairInfo+conservation;
   $("figureDetail").innerHTML=text;
@@ -203,7 +209,7 @@ function renderPairs(){
   shownPairs=D.pairs.filter(r=>(!seg||r.segment===seg)&&(!q||[pairName(r),r.id,r.source_left,r.source_right,r.col_left,r.col_right,r.template,r.major,...Object.keys(r.counts)].join(" ").toLowerCase().includes(q)));
   shownPairs.sort((a,b)=>sort==="low"?a.wc_gu-b.wc_gu||a.id-b.id:sort==="high"?b.wc_gu-a.wc_gu||a.id-b.id:sort==="gap"?(b.classes.one_gap+b.classes.two_gap)-(a.classes.one_gap+a.classes.two_gap)||a.id-b.id:a.id-b.id);
   $("pairCount").textContent=`${shownPairs.length} / 341个模板配对；每对197条观测；所有配对共67,177条观测。`;
-  $("pairTable").querySelector("tbody").innerHTML=shownPairs.map(r=>`<tr><td><button data-pair-jump="${r.id}">${pairName(r)}</button></td><td>Seg${String(r.segment).padStart(2,"0")}</td><td>${r.source_left} ↔ ${r.source_right}</td><td>${r.col_left} ↔ ${r.col_right}</td><td>${r.template}</td><td>${r.major} · ${r.major_count}/197</td><td>${r.classes.WC}</td><td>${r.classes.GU}</td><td>${r.classes.other}</td><td>${r.classes.one_gap} / ${r.classes.two_gap}</td><td>${r.classes.ambiguous}</td><td>${r.wc_gu}/197 · ${pct(r.wc_gu)}</td><td><button data-pair-figure="${r.id}">图</button></td></tr>`).join("");
+  $("pairTable").querySelector("tbody").innerHTML=shownPairs.map(r=>`<tr><td><button data-pair-jump="${r.id}">${pairName(r)}</button></td><td>${segmentNames.get(r.segment)} / Seg${String(r.segment).padStart(2,"0")}</td><td>${r.source_left} ↔ ${r.source_right}</td><td>${r.col_left} ↔ ${r.col_right}</td><td>${r.template}</td><td>${r.major} · ${r.major_count}/197</td><td>${r.classes.WC}</td><td>${r.classes.GU}</td><td>${r.classes.other}</td><td>${r.classes.one_gap} / ${r.classes.two_gap}</td><td>${r.classes.ambiguous}</td><td>${r.wc_gu}/197 · ${pct(r.wc_gu)}</td><td><button data-pair-figure="${r.id}">图</button></td></tr>`).join("");
 }
 function locateFromControl(){
   const n=+$("position").value,kind=$("coordinate").value;
@@ -219,12 +225,19 @@ $("figureLocate").onclick=()=>{if(selectSource(+$("figurePosition").value)){loca
 $("figureToMsa").onclick=()=>{if(selectSource(+$("figurePosition").value)&&selectedCol){location.hash="alignment";$("msa").scrollTop=0;}};
 $("toFigure").onclick=()=>{location.hash="structure";tab();$("figureMode").value="center";applyZoom();highlight(true);};
 $("centreSvg").onclick=e=>{
-  const node=e.target.closest("[data-pos]"),line=e.target.closest("[data-pair]");
+  const node=e.target.closest("[data-pos]"),line=e.target.closest("[data-pair]"),stem=e.target.closest("[data-segment-jump]");
   if(node){selectSource(+node.dataset.pos);if(selectedCol){location.hash="alignment";$("msa").scrollTop=0;}}
   else if(line){selectPair(+line.dataset.pair);location.hash="alignment";$("msa").scrollTop=0;}
+  else if(stem){
+    const s=D.segments.find(s=>s.id===+stem.dataset.segmentJump);
+    $("figureSegment").value=String(s.id);highlightSegment();selectSource(s.left_start);
+    location.hash="alignment";$("msa").scrollTop=0;
+  }
 };
+$("centreSvg").onkeydown=e=>{if((e.key==="Enter"||e.key===" ")&&e.target.closest("[data-segment-jump]")){e.preventDefault();e.target.closest("[data-segment-jump]").dispatchEvent(new MouseEvent("click",{bubbles:true}));}};
 $("figureSegment").onchange=highlightSegment;
 $("highlightLayer").onchange=conservationLayer;
+$("annotationLayer").onchange=annotationLayer;
 $("highlightSite").onchange=()=>{
   const p=+$("highlightSite").value;
   if(p&&selectSource(p)){location.hash="structure";tab();$("figureMode").value="center";applyZoom();highlight(true);}
@@ -268,7 +281,7 @@ $("conservationCounts").textContent=`原197条×5390列逐列统计：100%一致
 D.conservationSites.forEach(s=>{
   if(s.source_position)$("highlightSite").appendChild(new Option(`列${s.alignment_column} → 中心${s.source_position} ${s.center_base} · ${s.majority_count}/197${s.center_matches_majority?"":" · 中心少数"}`,String(s.source_position)));
 });
-segmentOptions();renderPairs();selectSource(3);tab();applyZoom();conservationLayer();
+segmentOptions();renderPairs();selectSource(3);tab();applyZoom();conservationLayer();annotationLayer();
 window.analysisReady=true;
 // Read-only QA surface, matching the saved data rather than hidden recalculations.
 window.PAIR_ATLAS={data:D,getState:()=>({selectedSource,selectedCol,pair:currentPair?.id,filteredCount:filteredSamples.length})};

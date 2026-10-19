@@ -34,4 +34,6 @@ button,select,input{padding:6px 9px;border:1px solid #bed1d7;border-radius:5px;c
 .download-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.download-grid a{padding:6px 0;border-bottom:1px solid var(--line)}footer{max-width:1480px;margin:18px auto;padding:12px 20px 24px;color:var(--muted);font-size:12px}
 @media(max-width:800px){header{padding:23px 16px}h1{font-size:25px}main{padding:12px}section{padding:14px}.figure-grid.compare{grid-template-columns:1fr}.section-head{display:block}nav{padding:8px}nav a{padding:7px 9px}.msa-table .sample-name{width:150px;min-width:150px;max-width:150px}.toolbar{gap:9px}.toolbar label{max-width:100%;flex-wrap:wrap}.figure-scroll,.reference-scroll{max-height:630px}.download-grid{grid-template-columns:1fr}}
 
+#helixLabels [data-segment-jump]{cursor:pointer}#helixLabels [data-segment-jump]:hover text,#helixLabels [data-segment-jump]:focus text{fill:#c74765}#positionLabels{pointer-events:none}
+
 .project-back{display:inline-block;color:#d1e5e7;margin-bottom:12px;font-size:13px;text-decoration:underline}
