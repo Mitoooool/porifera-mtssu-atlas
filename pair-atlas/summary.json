@@ -1,24 +1,36 @@
 {
   "date": "2026-10-18",
-  "center": "OM729629",
+  "center": "EU237490",
   "samples": 197,
   "alignment_columns": 5390,
-  "source_nt": 1068,
-  "aligned_nt": 1059,
+  "source_nt": 1310,
+  "aligned_nt": 1301,
   "trimmed_5prime": 2,
   "trimmed_3prime": 7,
-  "pairs": 289,
-  "mapped_pairs": 289,
-  "segments": 34,
-  "observations": 56933,
+  "pairs": 341,
+  "mapped_pairs": 341,
+  "segments": 38,
+  "observations": 67177,
   "overall_category_counts": {
-    "WC": 40453,
-    "GU": 8027,
-    "other": 5952,
-    "one_gap": 1705,
-    "two_gap": 770,
-    "ambiguous": 26
+    "WC": 44647,
+    "GU": 8891,
+    "other": 8303,
+    "one_gap": 3118,
+    "two_gap": 2186,
+    "ambiguous": 32
   },
   "all197_wc_gu_ge95": 99,
-  "all197_wc_gu_ge75": 248
+  "all197_wc_gu_ge75": 257,
+  "conservation": {
+    "denominator": 197,
+    "minimum_count_95": 188,
+    "strict_columns": 62,
+    "additional_95_columns": 166,
+    "total_ge95_columns": 228,
+    "strict_center_present": 62,
+    "additional_95_center_present": 166,
+    "selected_center_gaps": 0,
+    "center_minorities": 2
+  },
+  "species": "Xestospongia muta"
 }

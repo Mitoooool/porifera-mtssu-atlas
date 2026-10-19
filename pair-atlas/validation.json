@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "independently_recounted_pairs": 289,
-  "individually_verified_observations": 56933,
-  "unique_mapped_endpoints": 578,
-  "segments": 34,
+  "independently_recounted_pairs": 341,
+  "individually_verified_observations": 67177,
+  "unique_mapped_endpoints": 682,
+  "segments": 38,
   "all_pair_count_totals": 197,
   "all_explicit_16_combinations_checked": true,
   "all_frequencies_recomputed": true,
@@ -12,5 +12,14 @@
   "original_alignment_byte_identical": true,
   "all_input_hashes_unchanged": true,
   "embedded_dataset_matches_files": true,
+  "unchanged_EU237490_original_source_model": true,
+  "strict_197_of_197_highlights": 62,
+  "additional_188_to_196_of197_highlights": 166,
+  "combined_ge95_highlights": 228,
+  "minority_center_columns": [
+    1678,
+    1792
+  ],
+  "source_actual_bases_preserved_at_all_highlights": true,
   "public_ecoli_reference": "original CRW PDF/PNG and previous highlight static PNG only; no projection tables or UI"
 }

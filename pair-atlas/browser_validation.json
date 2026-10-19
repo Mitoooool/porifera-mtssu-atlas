@@ -3,8 +3,8 @@
   "existing_records": 216,
   "existing_substructures": 12,
   "existing_search_and_citation_preserved": true,
-  "public_center_nt": 1068,
-  "public_template_pairs": 289,
+  "public_center_nt": 1310,
+  "public_template_pairs": 341,
   "public_alignment_rows": 197,
   "original_ss_rows": 394,
   "bidirectional_structure_alignment_and_segment_partner_jumps": true,
@@ -19,7 +19,11 @@
     390,
     320
   ],
-  "local_links_checked": 20,
+  "local_links_checked": 22,
+  "strict_highlights": 62,
+  "additional_95_highlights": 166,
+  "combined_ge95_highlights": 228,
+  "minority_bases_preserved": 2,
   "protected_existing_files": 44,
   "page_errors": [],
   "http_errors": []

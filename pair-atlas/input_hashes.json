@@ -11,17 +11,21 @@
     "filename": "mapping_audit.tsv",
     "sha256": "32c8d4f14f161e3d7b7346202ae7f5602d70c8c37089e4e08a264fc2aa667a24"
   },
+  "source_models": {
+    "filename": "Porifera_219_classified.str",
+    "sha256": "5e0fb0829478bc00f967b7b4ec175b88d2e49f324eb02df5ed35193ca50139eb"
+  },
   "source": {
     "filename": "center_full_source.dbn",
-    "sha256": "5f8aaad9391e07547bd9919928baf0c125db733a77e4270f4edb62b0e4ce4582"
+    "sha256": "0cdc4efaa56794062137e57fba0b09bc8fc62999f382b169c1bd3199ad407443"
   },
   "coordinates": {
-    "filename": "04_center_1068_coordinates_and_pairs.tsv",
-    "sha256": "8219dd141c2b1a102e83729c79759960f65dcb29a73ac96595074dba339263a4"
+    "filename": "layout_coordinates.tsv",
+    "sha256": "82752aff4570923fec9e22357d78b604681d003ae29f6e518f475f8e84ad6f18"
   },
   "segments": {
-    "filename": "OM729629.st",
-    "sha256": "a758623c972a4bf5094dabb5d78df124fc26ae3d48ad7209fc66bb54324f6bc2"
+    "filename": "EU237490.st",
+    "sha256": "96a7aba40f112fd2dd798c5acee9c47bb5d7614973cc231ed6f27e6d2a6fc504"
   },
   "reference_png": {
     "filename": "CRW_reference_original.png",

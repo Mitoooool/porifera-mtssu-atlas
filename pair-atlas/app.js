@@ -9,7 +9,7 @@ const atPair=new Map(), colours={WC:"#008877",GU:"#66a8b8",other:"#bc7340",one_g
 D.pairs.forEach(r=>{atPair.set(r.source_left,r);atPair.set(r.source_right,r);});
 const sourceSegment=p=>{const r=pos.get(p);return r?.segment?`Seg${String(r.segment[0]).padStart(2,"0")}-${r.segment[1]}`:"连接/环区（未归Seg）";};
 const pairName=r=>r?`P${String(r.id).padStart(3,"0")}`:"无模板配对";
-const centre=D.rows.find(r=>r.accession==="OM729629");
+const centre=D.rows.find(r=>r.accession==="EU237490");
 const sortedRows=[centre,...D.rows.filter(r=>r!==centre)];
 let selectedSource=3,selectedCol=pos.get(3).col,currentPair=atPair.get(3),leftAt=currentPair.col_left,rightAt=currentPair.col_right;
 let filteredSamples=[],shownPairs=[],previousPairId=null;
@@ -47,7 +47,7 @@ function highlight(scroll=false){
     g.appendChild(el);
   });
   if(scroll){
-    const host=$("figureScroll"),rect=$("centreSvg").getBoundingClientRect(),scale=rect.width/1518;
+    const host=$("figureScroll"),rect=$("centreSvg").getBoundingClientRect(),scale=rect.width/D.figure.width;
     host.scrollTo({left:Math.max(0,r.x*scale-host.clientWidth/2),top:Math.max(0,r.y*scale-host.clientHeight/2),behavior:"instant"});
   }
 }
@@ -66,22 +66,32 @@ function applyZoom(){
   $("centrePane").hidden=!centerVisible;$("referencePane").hidden=!(compare||mode==="reference");$("oldReferencePane").hidden=mode!=="oldref";
   $("figureGrid").classList.toggle("compare",compare);
   const zoom=$("zoom").value;
-  $("figureInner").style.width=zoom==="fit"?"100%":Math.round(1518*+zoom)+"px";
+  $("figureInner").style.width=zoom==="fit"?"100%":Math.round(D.figure.width*+zoom)+"px";
+}
+function conservationLayer(){
+  const layer=$("highlightLayer").value;
+  document.querySelectorAll("#centreSvg .nt").forEach(nt=>{
+    const tier=nt.dataset.highlight,circle=nt.querySelector(".conservation-dot");
+    const visible=layer==="all"||tier===layer;
+    circle.setAttribute("fill",visible?circle.dataset.fill:"white");
+    circle.setAttribute("stroke",visible&&nt.dataset.variant==="true"?"#8546b5":"none");
+  });
 }
 function details(){
   $("alignmentDetail").removeAttribute("role");
   const r=selectedSource?pos.get(selectedSource):null;
   const info=r?`源位置 <b>${r.pos} ${r.base}</b> · ${sourceSegment(r.pos)} · bpRNA类别 ${r.kind} · ${r.col?`原矩阵列 <b>${r.col}</b>`:"未进入原矩阵"}`:
     `原矩阵列 <b>${selectedCol}</b> · 中心样本为gap · ${segmentAtColumn(selectedCol).full}`;
-  const pairInfo=currentPair?`<br>${pairName(currentPair)} · Seg${String(currentPair.segment).padStart(2,"0")} · 源位置 ${currentPair.source_left} ↔ ${currentPair.source_right} · 原矩阵列 ${currentPair.col_left} ↔ ${currentPair.col_right} · 模板 ${currentPair.template} · WC+GU ${currentPair.wc_gu}/197（${pct(currentPair.wc_gu)}）`:"<br>当前中心位点不属于289个模板配对；单列窗口仍显示原矩阵。";
-  const text=info+pairInfo;
+  const pairInfo=currentPair?`<br>${pairName(currentPair)} · Seg${String(currentPair.segment).padStart(2,"0")} · 源位置 ${currentPair.source_left} ↔ ${currentPair.source_right} · 原矩阵列 ${currentPair.col_left} ↔ ${currentPair.col_right} · 模板 ${currentPair.template} · WC+GU ${currentPair.wc_gu}/197（${pct(currentPair.wc_gu)}）`:"<br>当前中心位点不属于341个模板配对；单列窗口仍显示原矩阵。";
+  const conservation=r?.highlight?`<br>${r.highlight==="strict"?"青绿 · 全197条完全一致":"金黄 · ≥95%且不足100%一致"} · 多数 ${r.majority} ${r.majority_count}/197（${pct(r.majority_count)}）${r.variant?` · <b>中心实际为${r.base}，是少数碱基；紫圈标记，原序列不变</b>`:""}`:"";
+  const text=info+pairInfo+conservation;
   $("figureDetail").innerHTML=text;
   $("alignmentDetail").innerHTML=text+'<div class="secondary">红框：当前列；蓝框：中心模板伙伴列。全局组合频率仍使用全部197条；样本筛选只影响下方显示。</div>';
   $("partner").disabled=!r?.partner;
   $("toFigure").disabled=!r;
   $("figureToMsa").disabled=!r?.col;
   $("previousPair").disabled=!currentPair||currentPair.id===1;
-  $("nextPair").disabled=!currentPair||currentPair.id===289;
+  $("nextPair").disabled=!currentPair||currentPair.id===341;
   $("position").value=$("coordinate").value==="pair"?(currentPair?.id??""):$("coordinate").value==="source"?(selectedSource??""):(selectedCol??"");
   if(r)$("figurePosition").value=r.pos;
   $("segmentJump").value=r?.segment?r.segment[0]+r.segment[1]:"";
@@ -96,7 +106,7 @@ function updateCombinationOptions(){
   previousPairId=currentPair?.id??null;
 }
 function selectSource(p,recenter=true){
-  if(!Number.isInteger(p)||!pos.has(p)){error("中心完整源位置范围为1–1068。");return false;}
+  if(!Number.isInteger(p)||!pos.has(p)){error("中心完整源位置范围为1–1310。");return false;}
   selectedSource=p;selectedCol=pos.get(p).col;currentPair=atPair.get(p)||null;
   if(recenter){leftAt=currentPair?currentPair.col_left:selectedCol??1;rightAt=currentPair?currentPair.col_right:null;}
   updateCombinationOptions();details();highlight();frequency();alignment();
@@ -111,7 +121,7 @@ function selectColumn(c){
 }
 function selectPair(id){
   const r=D.pairs.find(r=>r.id===id);
-  if(!r){error("模板配对编号范围为P001–P289。");return false;}
+  if(!r){error("模板配对编号范围为P001–P341。");return false;}
   return selectSource(r.source_left);
 }
 const nearestLeft=[],nearestRight=[];
@@ -155,7 +165,7 @@ function alignment(){
   let head=`<thead><tr><th class="sample-name">原矩阵未改动 · 左/右列</th>${laneHeader}</tr>`;
   head+=`<tr><th class="sample-name">中心分段 / 左L或右R臂</th>${segments}</tr>`;
   head+=track("原比对列（1–5390）",c=>sparse(c,c%10===0?c:"·"));
-  head+=track("中心完整源位置（1–1068）",c=>{const p=colPos.get(c);return `<span class="track-value sparse" title="原列${c}；中心${p??"gap"}">${p?(p%10===0?p:"·"):"–"}</span>`;});
+  head+=track("中心完整源位置（1–1310）",c=>{const p=colPos.get(c);return `<span class="track-value sparse" title="原列${c}；中心${p??"gap"}">${p?(p%10===0?p:"·"):"–"}</span>`;});
   head+=track("中心bpRNA类别 / 配对SS",c=>{const p=colPos.get(c);return `<span class="track-value" title="${p?sourceSegment(p):segmentAtColumn(c).full}">${p?pos.get(p).kind:"–"}</span>`;});
   head+=track("中心原模型SS（非共识）",c=>`<span class="track-value">${centre.ss[c-1]}</span>`);
   head+=`</thead>`;
@@ -163,7 +173,8 @@ function alignment(){
   function cells(r,ss=false){
     return all.map(c=>{
       if(!c)return '<td class="sep"></td>';
-      const b=(ss?r.ss:r.seq)[c-1],classes=["cell",b==="-"?"gap":(!ss&&"ACGU".includes(b)?b:""),c===selectedCol?"selected":c===partnerCol?"partner-col":""].filter(Boolean).join(" ");
+      const centerPosition=colPos.get(c),tier=centerPosition?pos.get(centerPosition).highlight:"";
+      const b=(ss?r.ss:r.seq)[c-1],classes=["cell",b==="-"?"gap":(!ss&&"ACGU".includes(b)?b:""),c===selectedCol?"selected":c===partnerCol?"partner-col":"",tier==="strict"?"cons100":tier==="95_only"?"cons95":""].filter(Boolean).join(" ");
       const p=colPos.get(c),title=`${r.accession||r.label} · 原列${c} · 中心${p??"gap"} · ${segmentAtColumn(c).full}`;
       return `<td class="${classes}" data-col="${c}" title="${esc(title)}">${b}</td>`;
     }).join("");
@@ -172,13 +183,13 @@ function alignment(){
   const oldScroll=$("msa").scrollTop;
   $("msa").innerHTML=`<table class="msa-table">${head}<tbody>${body||`<tr><td class="sample-name">无匹配样本</td><td colspan="${all.length}">请调整筛选；全局频率仍为197条。</td></tr>`}</tbody></table>`;
   $("msa").scrollTop=oldScroll;
-  $("windowLabel").textContent=`显示 ${filteredSamples.length} / 197 条（全部列保持原坐标）；左窗 ${left[0]}–${left.at(-1)}${right.length?`；右窗 ${right[0]}–${right.at(-1)}`:""}；中心Seg轨道来自34段原注释；统计主分母197。`;
+  $("windowLabel").textContent=`显示 ${filteredSamples.length} / 197 条（全部列保持原坐标）；左窗 ${left[0]}–${left.at(-1)}${right.length?`；右窗 ${right[0]}–${right.at(-1)}`:""}；中心Seg轨道来自38段原注释；统计主分母197。`;
   $("rowJump").innerHTML='<option value="">选择样本（全部筛选结果）</option>'+filteredSamples.map((r,i)=>`<option value="${i}">${esc(r.accession||r.label)}${r===centre?" ★中心":""}</option>`).join("");
   $("previousWindow").disabled=left[0]===1;$("nextWindow").disabled=left.at(-1)===5390;
 }
 function frequency(){
   const r=currentPair;
-  if(!r){$("currentFrequency").innerHTML='<p class="small">当前列没有中心模板伙伴。请选择P001–P289中的配对查看联合组合。</p>';return;}
+  if(!r){$("currentFrequency").innerHTML='<p class="small">当前列没有中心模板伙伴。请选择P001–P341中的配对查看联合组合。</p>';return;}
   const order=["WC","GU","other","one_gap","two_gap","ambiguous"];
   const bar=`<div class="frequency-bar" aria-label="197条序列的互斥组合类别">${order.map(k=>`<span style="width:${100*r.classes[k]/197}%;background:${colours[k]}" title="${esc(D.categoryLabels[k])} ${r.classes[k]}/197"></span>`).join("")}</div>`;
   const cats=`<div class="legend">${order.map(k=>`<span><i style="height:9px;background:${colours[k]}"></i>${esc(D.categoryLabels[k])} ${r.classes[k]}（${pct(r.classes[k])}）</span>`).join("")}</div>`;
@@ -191,7 +202,7 @@ function renderPairs(){
   const seg=+$("pairSegment").value,q=$("pairSearch").value.toLowerCase().trim(),sort=$("pairSort").value;
   shownPairs=D.pairs.filter(r=>(!seg||r.segment===seg)&&(!q||[pairName(r),r.id,r.source_left,r.source_right,r.col_left,r.col_right,r.template,r.major,...Object.keys(r.counts)].join(" ").toLowerCase().includes(q)));
   shownPairs.sort((a,b)=>sort==="low"?a.wc_gu-b.wc_gu||a.id-b.id:sort==="high"?b.wc_gu-a.wc_gu||a.id-b.id:sort==="gap"?(b.classes.one_gap+b.classes.two_gap)-(a.classes.one_gap+a.classes.two_gap)||a.id-b.id:a.id-b.id);
-  $("pairCount").textContent=`${shownPairs.length} / 289个模板配对；每对197条观测；所有配对共56,933条观测。`;
+  $("pairCount").textContent=`${shownPairs.length} / 341个模板配对；每对197条观测；所有配对共67,177条观测。`;
   $("pairTable").querySelector("tbody").innerHTML=shownPairs.map(r=>`<tr><td><button data-pair-jump="${r.id}">${pairName(r)}</button></td><td>Seg${String(r.segment).padStart(2,"0")}</td><td>${r.source_left} ↔ ${r.source_right}</td><td>${r.col_left} ↔ ${r.col_right}</td><td>${r.template}</td><td>${r.major} · ${r.major_count}/197</td><td>${r.classes.WC}</td><td>${r.classes.GU}</td><td>${r.classes.other}</td><td>${r.classes.one_gap} / ${r.classes.two_gap}</td><td>${r.classes.ambiguous}</td><td>${r.wc_gu}/197 · ${pct(r.wc_gu)}</td><td><button data-pair-figure="${r.id}">图</button></td></tr>`).join("");
 }
 function locateFromControl(){
@@ -213,6 +224,11 @@ $("centreSvg").onclick=e=>{
   else if(line){selectPair(+line.dataset.pair);location.hash="alignment";$("msa").scrollTop=0;}
 };
 $("figureSegment").onchange=highlightSegment;
+$("highlightLayer").onchange=conservationLayer;
+$("highlightSite").onchange=()=>{
+  const p=+$("highlightSite").value;
+  if(p&&selectSource(p)){location.hash="structure";tab();$("figureMode").value="center";applyZoom();highlight(true);}
+};
 $("figureMode").onchange=applyZoom;$("zoom").onchange=()=>{applyZoom();highlight(true);};
 $("msa").onclick=e=>{const node=e.target.closest("[data-col]");if(node&&node.dataset.col)selectColumn(+node.dataset.col);};
 $("windowSize").onchange=alignment;
@@ -239,15 +255,20 @@ $("pairTable").onclick=e=>{
 $("exportPairs").onclick=()=>{
   const keys=["pair_id","segment","source_left","source_right","alignment_left","alignment_right","template","WC","GU","other","one_gap","two_gap","ambiguous","wc_gu_count","denominator","wc_gu_frequency_all197"];
   const text=keys.join("\t")+"\n"+shownPairs.map(r=>[pairName(r),"Seg"+r.segment,r.source_left,r.source_right,r.col_left,r.col_right,r.template,...["WC","GU","other","one_gap","two_gap","ambiguous"].map(k=>r.classes[k]),r.wc_gu,197,r.wc_gu/197].join("\t")).join("\n");
-  download("OM729629_filtered_pairs.tsv",text);
+  download("EU237490_filtered_pairs.tsv",text);
 };
 $("exportSamples").onclick=()=>{
   if(!currentPair){error("请先选择模板配对，再导出筛选观测。");return;}
   const r=currentPair,keys=["pair_id","sample_id","source_left","source_right","alignment_left","alignment_right","base_left","base_right","combination"];
   download(`${pairName(r)}_filtered_sample_observations.tsv`,keys.join("\t")+"\n"+filteredSamples.map(s=>[pairName(r),s.id,r.source_left,r.source_right,r.col_left,r.col_right,s.seq[r.col_left-1],s.seq[r.col_right-1],s.seq[r.col_left-1]+s.seq[r.col_right-1]].join("\t")).join("\n"));
 };
-$("globalSummary").innerHTML=`已映射 <b>289 / 289</b> 个模板配对；34个Seg合计289对；总观测 <b>56,933</b>。WC+GU / 197 ≥95%的配对 <b>${D.summary.all197_wc_gu_ge95}</b> 个，≥75%的配对 <b>${D.summary.all197_wc_gu_ge75}</b> 个（前者包含在后者中）。`;
-segmentOptions();renderPairs();selectSource(3);tab();applyZoom();
+$("globalSummary").innerHTML=`已映射 <b>341 / 341</b> 个模板配对；38个Seg合计341对；总观测 <b>67,177</b>。WC+GU / 197 ≥95%的配对 <b>${D.summary.all197_wc_gu_ge95}</b> 个，≥75%的配对 <b>${D.summary.all197_wc_gu_ge75}</b> 个（前者包含在后者中）。`;
+const cs=D.summary.conservation;
+$("conservationCounts").textContent=`原197条×5390列逐列统计：100%一致${cs.strict_columns}列；额外≥95%且<100%一致${cs.additional_95_columns}列；合计≥95%为${cs.total_ge95_columns}列（至少188/197）。228列均在EU237490中有实际碱基；其中2处中心为少数碱基，以紫圈标出。`;
+D.conservationSites.forEach(s=>{
+  if(s.source_position)$("highlightSite").appendChild(new Option(`列${s.alignment_column} → 中心${s.source_position} ${s.center_base} · ${s.majority_count}/197${s.center_matches_majority?"":" · 中心少数"}`,String(s.source_position)));
+});
+segmentOptions();renderPairs();selectSource(3);tab();applyZoom();conservationLayer();
 window.analysisReady=true;
 // Read-only QA surface, matching the saved data rather than hidden recalculations.
 window.PAIR_ATLAS={data:D,getState:()=>({selectedSource,selectedCol,pair:currentPair?.id,filteredCount:filteredSamples.length})};
