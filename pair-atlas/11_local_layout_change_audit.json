@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "changed_source_positions": [
+    876,
+    877,
+    878,
+    879,
+    880,
+    881,
+    882,
+    883,
+    884,
+    885,
+    886,
+    887,
+    888,
+    889,
+    890,
+    891,
+    892,
+    893,
+    894,
+    895,
+    896,
+    897,
+    898,
+    899,
+    900,
+    901,
+    902,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908,
+    909,
+    910,
+    911,
+    912,
+    913,
+    914,
+    915,
+    916,
+    917,
+    918,
+    919,
+    920,
+    921,
+    922,
+    923,
+    924,
+    925,
+    926,
+    927,
+    928,
+    929,
+    930,
+    931,
+    1067,
+    1068,
+    1069,
+    1070,
+    1071
+  ],
+  "changed_position_count": 61,
+  "unchanged_position_count": 1249,
+  "H1118_rigid_rotation_degrees": -90,
+  "H1118_source_interval": [
+    881,
+    929
+  ],
+  "H1118_adjacent_connectors": [
+    [
+      876,
+      880
+    ],
+    [
+      930,
+      931
+    ]
+  ],
+  "H1303_outward_connector": [
+    1067,
+    1071
+  ],
+  "H1303_endpoints_fixed": [
+    1066,
+    1072
+  ],
+  "other_61_annotation_groups_unchanged": true,
+  "adjusted_annotations": [
+    "H500 / S15",
+    "H1047 / S31",
+    "H1068 / S32",
+    "H1113+H1118 / S33",
+    "900"
+  ],
+  "user_corrected_display_names": {
+    "15": "H500",
+    "31": "H1047",
+    "32": "H1068",
+    "33": "H1113+H1118"
+  },
+  "all_non_coordinate_position_attributes_unchanged": true,
+  "pairs_rows_segment_intervals_statistics_and_highlights_unchanged": true
+}

@@ -8,7 +8,6 @@
   "public_alignment_rows": 197,
   "original_ss_rows": 394,
   "smooth_loop_arc_runs": 149,
-  "occupancy_sourced_CRW_helix_names": 38,
   "enlarged_external_source_labels": 28,
   "CRW_name_click_and_keyboard_to_alignment": true,
   "independent_name_number_layer_toggles": true,
@@ -25,12 +24,15 @@
     390,
     320
   ],
-  "local_links_checked": 24,
+  "local_links_checked": 26,
   "strict_highlights": 62,
   "additional_95_highlights": 166,
   "combined_ge95_highlights": 228,
   "minority_bases_preserved": 2,
-  "protected_existing_files": 44,
+  "protected_existing_files": 43,
   "page_errors": [],
-  "http_errors": []
+  "http_errors": [],
+  "crw_helix_labels": 38,
+  "user_corrected_helix_names": 4,
+  "original_occupancy_values_retained_in_audit": true
 }

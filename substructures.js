@@ -7,6 +7,7 @@
   let mode = 'types';
   let zoom = 1;
   let modalSource = '';
+  let captionText = '';
   const current = () => figures[data.segments[selected]];
   function render() {
     const item = current();
@@ -18,7 +19,8 @@
     if (item.originalLabel !== data.segments[selected]) notes.push(`截图标注 ${item.originalLabel}；统计字段 ${data.segments[selected]}。`);
     if (item.hasES) notes.push('原图 ES 对应统计中的 E。');
     if (mode === 'context') notes.push('原截图中的子结构与整体骨架位置。');
-    byId('substructure-caption').textContent = notes.join(' ');
+    captionText = notes.join(' ');
+    byId('substructure-caption').textContent = captionText;
     byId('substructure-caption').hidden = notes.length === 0;
     document.querySelectorAll('[data-substructure-mode]').forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.substructureMode === mode));
@@ -35,8 +37,8 @@
     modalSource = mode === 'types' ? item.image : item.context;
     byId('substructure-modal-image').src = modalSource;
     byId('substructure-modal-image').alt = byId('substructure-image').alt;
-    byId('substructure-modal-title').textContent = byId('substructure-figure-label').textContent;
-    byId('substructure-modal-caption').textContent = byId('substructure-caption').textContent + ' 可放大、滚动查看；按 Esc 关闭。';
+    byId('substructure-modal-title').textContent = data.segments[selected] + (mode === 'types' ? ' · 类型示意' : ' · 结构位置');
+    byId('substructure-modal-caption').textContent = captionText + ' 可放大、滚动查看；按 Esc 关闭。';
     updateZoom();
     byId('substructure-dialog').showModal();
     byId('substructure-zoom-viewport').scrollTo(0, 0);

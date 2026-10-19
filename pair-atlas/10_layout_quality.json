@@ -12,7 +12,7 @@
   "nucleotide_centers_closer_than_13_5": 0,
   "backbone_pair_line_crossings": 0,
   "crw_helix_names": 38,
-  "crw_name_source": "Helix occupancy.xlsx / Sheet1 / C and Q columns",
+  "crw_name_source": "Occupancy correspondence; user-corrected S15 and S31–S33 labels, 2026-10-19",
   "helix_name_font_px": 24,
   "source_position_font_px": 20,
   "source_position_labels": 28,

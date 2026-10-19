@@ -1,0 +1,5 @@
+﻿segment	previous_display_name	corrected_display_name	authority	date	biological_coordinates_or_pairs_changed
+15	H441	H500	explicit user correction	2026-10-19	false
+31	H1068	H1047	explicit user correction	2026-10-19	false
+32	H1113	H1068	explicit user correction	2026-10-19	false
+33	H1118	H1113+H1118	explicit user correction	2026-10-19	false

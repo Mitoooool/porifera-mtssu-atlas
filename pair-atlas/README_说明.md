@@ -34,3 +34,36 @@ CRW参考原图仍保留。此前的大肠杆菌高光仅保留ecoli_highlights_
 CRW几何转移不是结构同源性验证。原矩阵与旧模型均不覆盖。
 validation.json为独立全量复算结果；browser_validation.json为本发布模块的浏览器检查。
 input_hashes.json仅给出输入文件名及SHA-256，不含本地路径。
+
+
+## Bilingual interface / 中英文互照
+The homepage, figures, record dialogs, substructure explorer, paired-column module,
+methods and download controls use a shared presentation-only bilingual dictionary.
+The default is English + Chinese; compact buttons and options prioritize English.
+Language controls can switch to English-only or Chinese-only. Scientific records,
+sequences, original alignments, pair tables and highlight classifications are not translated or rewritten.
+主页、图版、记录详情、子结构、配对联动、方法及下载均采用同一套双语界面；默认中英互照，
+空间有限的控件优先英文，可切换英文或中文。原始科研数据不因翻译而改写。
+
+## Local corrections / 局部更正 · 2026-10-19
+- H1113+H1118 / S33: rigidly rotated to a horizontal stem; only its two adjacent linkers follow.
+- H1303 / S35: the basal connector at source positions 1067–1071 curves outward;
+  its two endpoints remain fixed. All other nucleotide coordinates are frozen.
+- User-corrected labels: S15 = H500; S31 = H1047; S32 = H1068; S33 = H1113+H1118.
+  The source occupancy workbook is NOT edited. Table 09 retains its original names
+  and records corrected display-name provenance; table 12 lists explicit user corrections.
+- 名称更正不改变S分段编号、源区间、配对或统计。源对应表未修改，旧名称与用户更正分别留痕。
+
+## Usage counters / 使用量统计
+Counting starts on 2026-10-19. Footer views are aggregate page loads, not unique visitors.
+Counts next to downloads are download LINK/BUTTON CLICKS, not verified completed transfers.
+Only browser clicks through this website are included, not direct file requests.
+Hits Counter provides public aggregate counters; only fixed site/file identifiers are sent.
+No search terms, sequence content or selected sample identifiers are sent by this integration.
+The third party can receive ordinary request metadata, including IP addresses.
+Counters are approximate, unaudited, and may include repeated clicks. They are not fraud-resistant.
+Offline previews, automated browser QA and browser privacy signals are excluded.
+The page supports opting out; failures show “Unavailable”, not a fabricated zero.
+统计自2026-10-19起，访问量为页面载入次数，下载量为链接/按钮点击次数，非独立人数或下载完成次数；
+只计经本站触发的点击。第三方可收到IP等常规请求信息，不发送搜索词、序列或所选样本。
+离线、自动核验及隐私退出不计数；服务失败明确显示暂不可用。

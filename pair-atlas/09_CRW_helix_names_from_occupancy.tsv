@@ -1,39 +1,39 @@
-﻿segment	crw	neefs	ecoli_bprna_segment	source_sheet	crw_cell	sponge_segment_cell	source_column_header	method
-1	H9	1	segment1	Sheet1	C3	Q3	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-2	H27	3	segment2	Sheet1	C5	Q5	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-3	H39	4	segment3	Sheet1	C6	Q6	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-4	H47	5	segment4	Sheet1	C7	Q7	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-5	H61	6	segment5	Sheet1	C8	Q8	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-6	H113	7	segment6	Sheet1	C9	Q9	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-7	H122	8	segment7	Sheet1	C10	Q10	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-8	H144	9	segment8	Sheet1	C11	Q11	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-9	H184	10	segment9	Sheet1	C12	Q12	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-10	H240	12	segment11	Sheet1	C14	Q14	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-11	H289	13	segment12	Sheet1	C15	Q15	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-12	H316	14	segment13	Sheet1	C16	Q16	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-13	H339	15	segment14	Sheet1	C17	Q17	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-14	H367	16	segment15	Sheet1	C18	Q18	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-15	H441	18	segment17	Sheet1	C20	Q20	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-16	H567	20	segment19	Sheet1	C22	Q22	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-17	H577	21	segment20	Sheet1	C23	Q23	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-18	H673	23	segment23	Sheet1	C26	Q26	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-19	H722	24	segment24	Sheet1	C27	Q27	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-20	H769	25	segment25	Sheet1	C28	Q28	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-21	H821	26	segment26	Sheet1	C29	Q29	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-22	H829	27	segment27	Sheet1	C30	Q30	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-23	H861	28	segment28	Sheet1	C31	Q31	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-24	H885	29	segment29	Sheet1	C32	Q32	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-25	H921	30	segment30	Sheet1	C33	Q33	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-26	H939	31	segment31	Sheet1	C34	Q34	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-27	H944	32	segment32	Sheet1	C35	Q35	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-28	H960	33	segment33	Sheet1	C36	Q36	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-29	H984	34	segment34	Sheet1	C37	Q37	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-30	H996	35	segment35	Sheet1	C38	Q38	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-31	H1068	37	segment39	Sheet1	C42	Q42	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-32	H1113	40	segment42	Sheet1	C45	Q45	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-33	H1118	41	segment43	Sheet1	C46	Q46	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-34	H1241	43	segment45	Sheet1	C48	Q48	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-35	H1303	45	segment46	Sheet1	C50	Q50	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-36	H1350	46	segment47	Sheet1	C51	Q51	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-37	H1399	47	segment48	Sheet1	C52	Q52	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
-38	H1506	48	segment49	Sheet1	C53	Q53	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching
+﻿segment	crw	neefs	ecoli_bprna_segment	source_sheet	crw_cell	sponge_segment_cell	source_column_header	method	occupancy_crw_original	display_name_source
+1	H9	1	segment1	Sheet1	C3	Q3	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H9	original occupancy correspondence
+2	H27	3	segment2	Sheet1	C5	Q5	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H27	original occupancy correspondence
+3	H39	4	segment3	Sheet1	C6	Q6	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H39	original occupancy correspondence
+4	H47	5	segment4	Sheet1	C7	Q7	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H47	original occupancy correspondence
+5	H61	6	segment5	Sheet1	C8	Q8	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H61	original occupancy correspondence
+6	H113	7	segment6	Sheet1	C9	Q9	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H113	original occupancy correspondence
+7	H122	8	segment7	Sheet1	C10	Q10	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H122	original occupancy correspondence
+8	H144	9	segment8	Sheet1	C11	Q11	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H144	original occupancy correspondence
+9	H184	10	segment9	Sheet1	C12	Q12	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H184	original occupancy correspondence
+10	H240	12	segment11	Sheet1	C14	Q14	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H240	original occupancy correspondence
+11	H289	13	segment12	Sheet1	C15	Q15	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H289	original occupancy correspondence
+12	H316	14	segment13	Sheet1	C16	Q16	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H316	original occupancy correspondence
+13	H339	15	segment14	Sheet1	C17	Q17	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H339	original occupancy correspondence
+14	H367	16	segment15	Sheet1	C18	Q18	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H367	original occupancy correspondence
+15	H500	18	segment17	Sheet1	C20	Q20	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H441	user correction, 2026-10-19
+16	H567	20	segment19	Sheet1	C22	Q22	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H567	original occupancy correspondence
+17	H577	21	segment20	Sheet1	C23	Q23	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H577	original occupancy correspondence
+18	H673	23	segment23	Sheet1	C26	Q26	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H673	original occupancy correspondence
+19	H722	24	segment24	Sheet1	C27	Q27	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H722	original occupancy correspondence
+20	H769	25	segment25	Sheet1	C28	Q28	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H769	original occupancy correspondence
+21	H821	26	segment26	Sheet1	C29	Q29	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H821	original occupancy correspondence
+22	H829	27	segment27	Sheet1	C30	Q30	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H829	original occupancy correspondence
+23	H861	28	segment28	Sheet1	C31	Q31	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H861	original occupancy correspondence
+24	H885	29	segment29	Sheet1	C32	Q32	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H885	original occupancy correspondence
+25	H921	30	segment30	Sheet1	C33	Q33	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H921	original occupancy correspondence
+26	H939	31	segment31	Sheet1	C34	Q34	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H939	original occupancy correspondence
+27	H944	32	segment32	Sheet1	C35	Q35	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H944	original occupancy correspondence
+28	H960	33	segment33	Sheet1	C36	Q36	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H960	original occupancy correspondence
+29	H984	34	segment34	Sheet1	C37	Q37	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H984	original occupancy correspondence
+30	H996	35	segment35	Sheet1	C38	Q38	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H996	original occupancy correspondence
+31	H1047	37	segment39	Sheet1	C42	Q42	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H1068	user correction, 2026-10-19
+32	H1068	40	segment42	Sheet1	C45	Q45	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H1113	user correction, 2026-10-19
+33	H1113+H1118	41	segment43	Sheet1	C46	Q46	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H1118	user correction, 2026-10-19
+34	H1241	43	segment45	Sheet1	C48	Q48	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H1241	original occupancy correspondence
+35	H1303	45	segment46	Sheet1	C50	Q50	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H1303	original occupancy correspondence
+36	H1350	46	segment47	Sheet1	C51	Q51	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H1350	original occupancy correspondence
+37	H1399	47	segment48	Sheet1	C52	Q52	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H1399	original occupancy correspondence
+38	H1506	48	segment49	Sheet1	C53	Q53	Spongia（海绵） SEG38	existing occupancy-table correspondence; not geometric pair-tree matching	H1506	original occupancy correspondence
