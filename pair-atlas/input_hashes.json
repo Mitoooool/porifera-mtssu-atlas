@@ -1,0 +1,46 @@
+{
+  "alignment": {
+    "filename": "Porifera_197_MUSCLE_align.fasta",
+    "sha256": "87ea1f09e02eba5ada063f167530d24a2e71690cc6d16fe685683750fe38c77f"
+  },
+  "structures": {
+    "filename": "Porifera_197_structure_aligned.str",
+    "sha256": "8a5ad247b67e37bb2d210c1d33ab7f4171400b411a98651703be11649f771aab"
+  },
+  "mapping_audit": {
+    "filename": "mapping_audit.tsv",
+    "sha256": "32c8d4f14f161e3d7b7346202ae7f5602d70c8c37089e4e08a264fc2aa667a24"
+  },
+  "source": {
+    "filename": "center_full_source.dbn",
+    "sha256": "5f8aaad9391e07547bd9919928baf0c125db733a77e4270f4edb62b0e4ce4582"
+  },
+  "coordinates": {
+    "filename": "04_center_1068_coordinates_and_pairs.tsv",
+    "sha256": "8219dd141c2b1a102e83729c79759960f65dcb29a73ac96595074dba339263a4"
+  },
+  "segments": {
+    "filename": "OM729629.st",
+    "sha256": "a758623c972a4bf5094dabb5d78df124fc26ae3d48ad7209fc66bb54324f6bc2"
+  },
+  "reference_png": {
+    "filename": "CRW_reference_original.png",
+    "sha256": "a17eaeead4e2484e5ab739694e5ad3e53fc54d9707cd783f2c9ea3a541c380d1"
+  },
+  "reference_pdf": {
+    "filename": "大肠杆菌示意图.pdf",
+    "sha256": "ca03bad60968f3d77cb75c93473793a5d82e9b7f4efe903effe192179251e7c3"
+  },
+  "previous_reference_jpg": {
+    "filename": "reference_supplied_original.jpg",
+    "sha256": "ff5a60f91d6cfa52155034f4515f39ed23d53763e1629840d526c6c806b18def"
+  },
+  "previous_reference_overlay": {
+    "filename": "01_reference_added_highlights.svg",
+    "sha256": "58a83263e923dbe5cbff011f44548e736c56168b18eac380f7e7a835fc503983"
+  },
+  "ecoli_highlight_image": {
+    "filename": "ecoli_highlights_static.png",
+    "sha256": "2b4ef54beaa01b52c571aa63bb7348e6de6e51c6b6de188466fb76e6801a984d"
+  }
+}

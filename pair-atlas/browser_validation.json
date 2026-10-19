@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "existing_records": 216,
+  "existing_substructures": 12,
+  "existing_search_and_citation_preserved": true,
+  "public_center_nt": 1068,
+  "public_template_pairs": 289,
+  "public_alignment_rows": 197,
+  "original_ss_rows": 394,
+  "bidirectional_structure_alignment_and_segment_partner_jumps": true,
+  "all197_frequency_denominator_preserved": true,
+  "old_ecoli_highlights": "static PNG only",
+  "old_projection_tables_or_ui_published": false,
+  "mobile_width_checked": 390,
+  "homepage_widths_checked": [
+    1440,
+    1024,
+    800,
+    390,
+    320
+  ],
+  "local_links_checked": 20,
+  "protected_existing_files": 44,
+  "page_errors": [],
+  "http_errors": []
+}

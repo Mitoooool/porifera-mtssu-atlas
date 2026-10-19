@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-18",
+  "center": "OM729629",
+  "samples": 197,
+  "alignment_columns": 5390,
+  "source_nt": 1068,
+  "aligned_nt": 1059,
+  "trimmed_5prime": 2,
+  "trimmed_3prime": 7,
+  "pairs": 289,
+  "mapped_pairs": 289,
+  "segments": 34,
+  "observations": 56933,
+  "overall_category_counts": {
+    "WC": 40453,
+    "GU": 8027,
+    "other": 5952,
+    "one_gap": 1705,
+    "two_gap": 770,
+    "ambiguous": 26
+  },
+  "all197_wc_gu_ge95": 99,
+  "all197_wc_gu_ge75": 248
+}

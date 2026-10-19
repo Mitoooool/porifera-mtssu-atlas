@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "independently_recounted_pairs": 289,
+  "individually_verified_observations": 56933,
+  "unique_mapped_endpoints": 578,
+  "segments": 34,
+  "all_pair_count_totals": 197,
+  "all_explicit_16_combinations_checked": true,
+  "all_frequencies_recomputed": true,
+  "source_and_svg_nt_and_pair_graph_unchanged": true,
+  "crw_geometry_unchanged": true,
+  "original_alignment_byte_identical": true,
+  "all_input_hashes_unchanged": true,
+  "embedded_dataset_matches_files": true,
+  "public_ecoli_reference": "original CRW PDF/PNG and previous highlight static PNG only; no projection tables or UI"
+}
