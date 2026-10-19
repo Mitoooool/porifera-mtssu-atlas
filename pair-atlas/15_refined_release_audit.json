@@ -1,0 +1,196 @@
+{
+  "status": "PASS",
+  "center": "EU237490",
+  "records": 197,
+  "alignment_columns": 5390,
+  "original_template_pairs": 341,
+  "extra_user_pseudoknot_pairs": 6,
+  "pseudoknots_have_no_S_names": true,
+  "H1074_is_not_a_pseudoknot": true,
+  "H1074_shares_S32_with_H1068": true,
+  "approved_SVG_and_PNG_byte_identical": true,
+  "svg_sha256": "c9bbcdd59948c20e114cec690f385e1a06dcdad32dcab2ce0f857f586c290a68",
+  "png_sha256": "56e1dc65160cd750c379a30423a83fd02841146d6e642e1c2775aefdbe669231",
+  "conservation_bands": [
+    {
+      "label": "75–<80%",
+      "color": "#DFE8EE",
+      "count": 84
+    },
+    {
+      "label": "80–<85%",
+      "color": "#BDD1DD",
+      "count": 113
+    },
+    {
+      "label": "85–<90%",
+      "color": "#94B8C9",
+      "count": 139
+    },
+    {
+      "label": "90–<95%",
+      "color": "#6B9FB2",
+      "count": 140
+    },
+    {
+      "label": "95–<100%",
+      "color": "#FFE34D",
+      "count": 166
+    },
+    {
+      "label": "100%",
+      "color": "#FF5A54",
+      "count": 62
+    }
+  ],
+  "highlighted": 704,
+  "highlighted_minority_bases": 14,
+  "scientific_sequences_original_pairs_and_statistics_unchanged": true,
+  "pseudoknot_extraction": {
+    "records": 197,
+    "fragments": 788,
+    "modules": {
+      "H17": [
+        {
+          "label": "H9 loop",
+          "source_start": 8,
+          "source_end": 14,
+          "flanking_source": [
+            7,
+            15
+          ],
+          "start_col": 6,
+          "end_col": 12,
+          "columns": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "target_columns_in_pair_order": [
+            9,
+            10,
+            11
+          ],
+          "center_motif": "UGAUUUU"
+        },
+        {
+          "label": "Opposing linker",
+          "source_start": 695,
+          "source_end": 702,
+          "flanking_source": [
+            694,
+            703
+          ],
+          "start_col": 2813,
+          "end_col": 2823,
+          "columns": [
+            2813,
+            2814,
+            2815,
+            2816,
+            2817,
+            2818,
+            2819,
+            2820,
+            2821,
+            2822,
+            2823
+          ],
+          "target_columns_in_pair_order": [
+            2821,
+            2819,
+            2818
+          ],
+          "center_motif": "AAAAAAUU"
+        }
+      ],
+      "H505": [
+        {
+          "label": "H500 internal-loop arm",
+          "source_start": 349,
+          "source_end": 356,
+          "flanking_source": [
+            348,
+            357
+          ],
+          "start_col": 1760,
+          "end_col": 1768,
+          "columns": [
+            1760,
+            1761,
+            1762,
+            1763,
+            1764,
+            1765,
+            1766,
+            1767,
+            1768
+          ],
+          "target_columns_in_pair_order": [
+            1761,
+            1762,
+            1763
+          ],
+          "center_motif": "GUCUAAUA"
+        },
+        {
+          "label": "H567 AGAC loop",
+          "source_start": 368,
+          "source_end": 371,
+          "flanking_source": [
+            367,
+            372
+          ],
+          "start_col": 1780,
+          "end_col": 1783,
+          "columns": [
+            1780,
+            1781,
+            1782,
+            1783
+          ],
+          "target_columns_in_pair_order": [
+            1783,
+            1782,
+            1781
+          ],
+          "center_motif": "AGAC"
+        }
+      ]
+    }
+  },
+  "baseline_commit": "599367710a4baf0da24713b383af565cd3b734ec",
+  "independent_audit": {
+    "status": "PASS",
+    "original_records": 197,
+    "original_alignment": [
+      197,
+      5390
+    ],
+    "original_sequences_pairs_and_statistics_unchanged": true,
+    "original_pairs": 341,
+    "extra_pseudoknot_pairs_separate": 6,
+    "H1074_non_pseudoknot_shared_S32": true,
+    "all_layout_coordinates_match_approved_v3": true,
+    "embedded_svg_and_downloads_match_approved_v3": true,
+    "G853_directly_below_red_U852": true,
+    "highlighted_sites_independently_recounted": 704,
+    "complete_fragments_independently_checked": 788,
+    "pair_observations_independently_checked": 1182,
+    "no_realignment_or_refolding": true,
+    "original_paired_column_statistics_and_reference_assets_protected": true,
+    "protected_existing_files": 75,
+    "browser_status": "PASS",
+    "counter_requests_during_QA": 0,
+    "no_untranslated_strings_in_checked_views": true
+  },
+  "browser_checks": [
+    "Homepage: 216 records,12 substructures,search,citation,three language modes,responsive",
+    "Atlas: approved geometry/font/colors;704 highlights and filters;38 helix jumps;H1074 jump;4 PK popup entry points;download hash;language modes;responsive",
+    "Pseudoknots: 197 records each;complete 7/11 and9/4-column blocks;6 highlighted sites per record;compact and gap views;197×4 exports;groups;SS;language modes;mobile cards"
+  ]
+}

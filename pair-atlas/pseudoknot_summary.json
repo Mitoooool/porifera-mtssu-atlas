@@ -1,0 +1,104 @@
+{
+  "H17": {
+    "records": 197,
+    "all_three_sequence_compatible": 169,
+    "pairs": [
+      {
+        "source_left": 11,
+        "source_right": 700,
+        "col_left": 9,
+        "col_right": 2821,
+        "counts": {
+          "WC": 181,
+          "GU": 0,
+          "other": 12,
+          "one_gap": 0,
+          "two_gap": 0,
+          "ambiguous": 4
+        },
+        "original_exact_count": 0
+      },
+      {
+        "source_left": 12,
+        "source_right": 699,
+        "col_left": 10,
+        "col_right": 2819,
+        "counts": {
+          "WC": 192,
+          "GU": 1,
+          "other": 4,
+          "one_gap": 0,
+          "two_gap": 0,
+          "ambiguous": 0
+        },
+        "original_exact_count": 0
+      },
+      {
+        "source_left": 13,
+        "source_right": 698,
+        "col_left": 11,
+        "col_right": 2818,
+        "counts": {
+          "WC": 177,
+          "GU": 12,
+          "other": 6,
+          "one_gap": 2,
+          "two_gap": 0,
+          "ambiguous": 0
+        },
+        "original_exact_count": 0
+      }
+    ]
+  },
+  "H505": {
+    "records": 197,
+    "all_three_sequence_compatible": 172,
+    "pairs": [
+      {
+        "source_left": 349,
+        "source_right": 371,
+        "col_left": 1761,
+        "col_right": 1783,
+        "counts": {
+          "WC": 177,
+          "GU": 7,
+          "other": 13,
+          "one_gap": 0,
+          "two_gap": 0,
+          "ambiguous": 0
+        },
+        "original_exact_count": 0
+      },
+      {
+        "source_left": 350,
+        "source_right": 370,
+        "col_left": 1762,
+        "col_right": 1782,
+        "counts": {
+          "WC": 177,
+          "GU": 1,
+          "other": 18,
+          "one_gap": 0,
+          "two_gap": 0,
+          "ambiguous": 1
+        },
+        "original_exact_count": 0
+      },
+      {
+        "source_left": 351,
+        "source_right": 369,
+        "col_left": 1763,
+        "col_right": 1781,
+        "counts": {
+          "WC": 181,
+          "GU": 2,
+          "other": 14,
+          "one_gap": 0,
+          "two_gap": 0,
+          "ambiguous": 0
+        },
+        "original_exact_count": 0
+      }
+    ]
+  }
+}

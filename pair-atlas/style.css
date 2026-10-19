@@ -37,3 +37,12 @@ button,select,input{padding:6px 9px;border:1px solid #bed1d7;border-radius:5px;c
 #helixLabels [data-segment-jump]{cursor:pointer}#helixLabels [data-segment-jump]:hover text,#helixLabels [data-segment-jump]:focus text{fill:#c74765}#positionLabels{pointer-events:none}
 
 .project-back{display:inline-block;color:#d1e5e7;margin-bottom:12px;font-size:13px;text-decoration:underline}
+
+/* Approved conservation colors; original sequence colors remain independent. */
+.cell.consband-0{border-top:2px solid #DFE8EE!important}
+.cell.consband-1{border-top:2px solid #BDD1DD!important}
+.cell.consband-2{border-top:2px solid #94B8C9!important}
+.cell.consband-3{border-top:2px solid #6B9FB2!important}
+.cell.consband-4{border-top:2px solid #FFE34D!important}
+.cell.consband-5{border-top:2px solid #FF5A54!important}
+[data-pk-open],[data-extra-helix="H1074"]{cursor:pointer}.pseudoknot-actions{padding:10px 12px;background:#f5f0f7;border-left:3px solid #b6a0bd}.pseudoknot-actions button{font-size:13px}.conservation-legend{gap:10px 16px}

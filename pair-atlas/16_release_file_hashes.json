@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "599367710a4baf0da24713b383af565cd3b734ec",
+  "date": "2026-10-19",
+  "sha256": {
+    "bilingual.js": "4c00035ae97253019dd2219f8adb0f0fba5f836419cd0e1e882e2fd06ac9a7e1",
+    "index.html": "0618a3a1b0c730374490552106d88125f203b83987244544b270d1b272318af9",
+    "pair-atlas/05_center_1310_positions.tsv": "bc774a3563119c05eb62366e4c7386edd129fd1f275866e3f4b5ef0bd2a54de8",
+    "pair-atlas/14_display_conservation_ge75.tsv": "5311483b1d93103983c9a7a29f3f2e9687dbef74d623ea69031a8ea238b5684e",
+    "pair-atlas/15_refined_release_audit.json": "c8d0d53b1962f9674ba16b994e10cde33b31284861effcb83916f790767ab17f",
+    "pair-atlas/app.js": "6292eef62b7edf7b270e1f74a2c252fa0d194721dcb6b5418944576b73af3318",
+    "pair-atlas/bilingual.js": "4c00035ae97253019dd2219f8adb0f0fba5f836419cd0e1e882e2fd06ac9a7e1",
+    "pair-atlas/data.js": "6e91e3c2ac86336226961d5eb51ce25aab38a87161bb764143f7f0833168e022",
+    "pair-atlas/EU237490_CRW_conservation.png": "56e1dc65160cd750c379a30423a83fd02841146d6e642e1c2775aefdbe669231",
+    "pair-atlas/EU237490_CRW_conservation.svg": "c9bbcdd59948c20e114cec690f385e1a06dcdad32dcab2ce0f857f586c290a68",
+    "pair-atlas/index.html": "28fe812f6d73acea80591c688e1ab6349826ff2641dede5834c6856c5fcc0f17",
+    "pair-atlas/pair_atlas_offline.zip": "8fc836e00130b90e2c79c10c4ff43797480f28372dbdae4f612ec0202e10c1cb",
+    "pair-atlas/pseudoknot_fragments_197x4.fasta": "3f4608a870971bb5c68694cbe44e27538924baa9e47b4312b5b5203b35aa7add",
+    "pair-atlas/pseudoknot_fragments_197x4.tsv": "5f8d1fbbf041e6bac4351e80ac301d98aa2eeba9394237d327829d6dd8fbcf91",
+    "pair-atlas/pseudoknot_observations_197x6.tsv": "7eb7fd1eb8c45d4b7bb12a9c666ae07a534639b0d26a09cb381a33f3e3c80a69",
+    "pair-atlas/pseudoknot_summary.json": "5ede13e2d805cbc5320d47240b390659050b0df4fdeba326bb6feb53445b8c06",
+    "pair-atlas/pseudoknot_view_data.json": "6283460938e89706897c7addcd597ead07b46315117070be1f1bd61ff59857e3",
+    "pair-atlas/pseudoknot_viewer.html": "fee02aefc87892af8276c8cc26ce855fc7396cdff4b3c2848d2566c8369cb853",
+    "pair-atlas/README_说明.md": "6ec039957e21b379e919433a5256d940f48a3c673cc423f77c8c08713fa6dd86",
+    "pair-atlas/style.css": "67052d474ce0c06bf2747490064fc59b549e8952184fb52e2b3bb3eb79b70fa1",
+    "pair-atlas/user_annotations.json": "a84165e6deb91283292548b3ecac87b915e0718923326cc1ebf8ebf6dba8bc85"
+  },
+  "note": "This manifest excludes itself; offline ZIP excludes itself and this manifest."
+}

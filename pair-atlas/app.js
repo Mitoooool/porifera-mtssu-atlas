@@ -12,6 +12,12 @@ const sourceSegment=p=>{const r=pos.get(p);return r?.segment?`Seg${String(r.segm
 const pairName=r=>r?`P${String(r.id).padStart(3,"0")}`:"无模板配对";
 const centre=D.rows.find(r=>r.accession==="EU237490");
 const sortedRows=[centre,...D.rows.filter(r=>r!==centre)];
+const displayUi=D.displayConservation,displaySites=new Map(displayUi.sites.map(s=>[s.source_position,s]));
+const originalDots=new Map(Array.from(document.querySelectorAll("#centreSvg .nt")).map(nt=>{
+ const c=nt.querySelector("circle");return [+nt.dataset.pos,{fill:c.getAttribute("fill"),stroke:c.getAttribute("stroke"),width:c.getAttribute("stroke-width")}];
+}));
+function openPK(name){window.open("pseudoknot_viewer.html?helix="+encodeURIComponent(name),"PoriferaPseudoknotWindow","width=1380,height=920,resizable=yes,scrollbars=yes");}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-open-pk]");if(b){e.preventDefault();openPK(b.dataset.openPk);}});
 let selectedSource=3,selectedCol=pos.get(3).col,currentPair=atPair.get(3),leftAt=currentPair.col_left,rightAt=currentPair.col_right;
 let filteredSamples=[],shownPairs=[],previousPairId=null;
 
@@ -49,7 +55,7 @@ function highlight(scroll=false){
   });
   if(scroll){
     const host=$("figureScroll"),rect=$("centreSvg").getBoundingClientRect(),scale=rect.width/D.figure.width;
-    host.scrollTo({left:Math.max(0,r.x*scale-host.clientWidth/2),top:Math.max(0,r.y*scale-host.clientHeight/2),behavior:"instant"});
+    host.scrollTo({left:Math.max(0,r.x*scale-host.clientWidth/2),top:Math.max(0,(r.y+displayUi.svg_y_offset)*scale-host.clientHeight/2),behavior:"instant"});
   }
 }
 function highlightSegment(){
@@ -70,18 +76,19 @@ function applyZoom(){
   $("figureInner").style.width=zoom==="fit"?"100%":Math.round(D.figure.width*+zoom)+"px";
 }
 function conservationLayer(){
-  const layer=$("highlightLayer").value;
-  document.querySelectorAll("#centreSvg .nt").forEach(nt=>{
-    const tier=nt.dataset.highlight,circle=nt.querySelector(".conservation-dot");
-    const visible=layer==="all"||tier===layer;
-    circle.setAttribute("fill",visible?circle.dataset.fill:"white");
-    circle.setAttribute("stroke",visible&&nt.dataset.variant==="true"?"#8546b5":"none");
-  });
+ const layer=$("highlightLayer").value;
+ document.querySelectorAll("#centreSvg .nt").forEach(nt=>{
+  const s=displaySites.get(+nt.dataset.pos),old=originalDots.get(+nt.dataset.pos),circle=nt.querySelector("circle");
+  const visible=!!s&&(layer==="all"||layer===s.band||layer==="strict"&&s.band==="100%"||layer==="ge95"&&s.majority_count>=188);
+  circle.setAttribute("fill",visible?old.fill:"white");circle.setAttribute("stroke",visible?old.stroke:"none");
+  circle.setAttribute("stroke-width",visible?old.width:"0");
+ });
 }
 function annotationLayer(){
   const mode=$("annotationLayer").value;
   $("helixLabels").style.display=mode==="all"||mode==="helix"?"":"none";
   $("positionLabels").style.display=mode==="all"||mode==="number"?"":"none";
+  $("additionalHelixLabels").style.display=mode==="all"||mode==="helix"?"":"none";
 }
 function details(){
   $("alignmentDetail").removeAttribute("role");
@@ -89,8 +96,11 @@ function details(){
   const info=r?`源位置 <b>${r.pos} ${r.base}</b> · ${sourceSegment(r.pos)} · bpRNA类别 ${r.kind} · ${r.col?`原矩阵列 <b>${r.col}</b>`:"未进入原矩阵"}`:
     `原矩阵列 <b>${selectedCol}</b> · 中心样本为gap · ${segmentAtColumn(selectedCol).full}`;
   const pairInfo=currentPair?`<br>${pairName(currentPair)} · ${segmentNames.get(currentPair.segment)} / Seg${String(currentPair.segment).padStart(2,"0")} · 源位置 ${currentPair.source_left} ↔ ${currentPair.source_right} · 原矩阵列 ${currentPair.col_left} ↔ ${currentPair.col_right} · 模板 ${currentPair.template} · WC+GU ${currentPair.wc_gu}/197（${pct(currentPair.wc_gu)}）`:"<br>当前中心位点不属于341个模板配对；单列窗口仍显示原矩阵。";
-  const conservation=r?.highlight?`<br>${r.highlight==="strict"?"青绿 · 全197条完全一致":"金黄 · ≥95%且不足100%一致"} · 多数 ${r.majority} ${r.majority_count}/197（${pct(r.majority_count)}）${r.variant?` · <b>中心实际为${r.base}，是少数碱基；紫圈标记，原序列不变</b>`:""}`:"";
-  const text=info+pairInfo+conservation;
+  const site=r?displaySites.get(r.pos):null;
+  const conservation=site?`<br>显示分档 ${site.band} · 多数 ${site.majority_base} ${site.majority_count}/197（${pct(site.majority_count)}）${!site.center_matches_majority?` · <b>中心实际为${r.base}，是少数碱基；细圈标记，原序列不变</b>`:""}`:"";
+  const pkNames=r?Object.entries(D.extraUserHelices).filter(([name,h])=>h.pairs.some(pair=>pair.includes(r.pos))).map(([name])=>name):[];
+  const pkInfo=pkNames.map(name=>`<br><button data-open-pk="${name}">${name} · 查看完整片段伪结窗口</button>`).join("");
+  const text=info+pairInfo+conservation+pkInfo;
   $("figureDetail").innerHTML=text;
   $("alignmentDetail").innerHTML=text+'<div class="secondary">红框：当前列；蓝框：中心模板伙伴列。全局组合频率仍使用全部197条；样本筛选只影响下方显示。</div>';
   $("partner").disabled=!r?.partner;
@@ -179,8 +189,8 @@ function alignment(){
   function cells(r,ss=false){
     return all.map(c=>{
       if(!c)return '<td class="sep"></td>';
-      const centerPosition=colPos.get(c),tier=centerPosition?pos.get(centerPosition).highlight:"";
-      const b=(ss?r.ss:r.seq)[c-1],classes=["cell",b==="-"?"gap":(!ss&&"ACGU".includes(b)?b:""),c===selectedCol?"selected":c===partnerCol?"partner-col":"",tier==="strict"?"cons100":tier==="95_only"?"cons95":""].filter(Boolean).join(" ");
+      const centerPosition=colPos.get(c),tier=centerPosition?displaySites.get(centerPosition)?.band:"";
+      const b=(ss?r.ss:r.seq)[c-1],classes=["cell",b==="-"?"gap":(!ss&&"ACGU".includes(b)?b:""),c===selectedCol?"selected":c===partnerCol?"partner-col":"",tier?("consband-"+displayUi.bands.findIndex(b=>b.label===tier)):""].filter(Boolean).join(" ");
       const p=colPos.get(c),title=`${r.accession||r.label} · 原列${c} · 中心${p??"gap"} · ${segmentAtColumn(c).full}`;
       return `<td class="${classes}" data-col="${c}" title="${esc(title)}">${b}</td>`;
     }).join("");
@@ -225,6 +235,9 @@ $("figureLocate").onclick=()=>{if(selectSource(+$("figurePosition").value)){loca
 $("figureToMsa").onclick=()=>{if(selectSource(+$("figurePosition").value)&&selectedCol){location.hash="alignment";$("msa").scrollTop=0;}};
 $("toFigure").onclick=()=>{location.hash="structure";tab();$("figureMode").value="center";applyZoom();highlight(true);};
 $("centreSvg").onclick=e=>{
+  const pk=e.target.closest("[data-pk-open]"),extra=e.target.closest('[data-extra-helix="H1074"]');
+  if(pk){openPK(pk.dataset.pkOpen);return;}
+  if(extra){selectSource(853);location.hash="alignment";$("msa").scrollTop=0;return;}
   const node=e.target.closest("[data-pos]"),line=e.target.closest("[data-pair]"),stem=e.target.closest("[data-segment-jump]");
   if(node){selectSource(+node.dataset.pos);if(selectedCol){location.hash="alignment";$("msa").scrollTop=0;}}
   else if(line){selectPair(+line.dataset.pair);location.hash="alignment";$("msa").scrollTop=0;}
@@ -234,7 +247,7 @@ $("centreSvg").onclick=e=>{
     location.hash="alignment";$("msa").scrollTop=0;
   }
 };
-$("centreSvg").onkeydown=e=>{if((e.key==="Enter"||e.key===" ")&&e.target.closest("[data-segment-jump]")){e.preventDefault();e.target.closest("[data-segment-jump]").dispatchEvent(new MouseEvent("click",{bubbles:true}));}};
+$("centreSvg").onkeydown=e=>{if((e.key==="Enter"||e.key===" ")&&e.target.closest("[data-segment-jump],[data-extra-helix]")){e.preventDefault();e.target.closest("[data-segment-jump],[data-extra-helix]").dispatchEvent(new MouseEvent("click",{bubbles:true}));}};
 $("figureSegment").onchange=highlightSegment;
 $("highlightLayer").onchange=conservationLayer;
 $("annotationLayer").onchange=annotationLayer;
@@ -276,10 +289,9 @@ $("exportSamples").onclick=()=>{
   download(`${pairName(r)}_filtered_sample_observations.tsv`,keys.join("\t")+"\n"+filteredSamples.map(s=>[pairName(r),s.id,r.source_left,r.source_right,r.col_left,r.col_right,s.seq[r.col_left-1],s.seq[r.col_right-1],s.seq[r.col_left-1]+s.seq[r.col_right-1]].join("\t")).join("\n"));
 };
 $("globalSummary").innerHTML=`已映射 <b>341 / 341</b> 个模板配对；38个Seg合计341对；总观测 <b>67,177</b>。WC+GU / 197 ≥95%的配对 <b>${D.summary.all197_wc_gu_ge95}</b> 个，≥75%的配对 <b>${D.summary.all197_wc_gu_ge75}</b> 个（前者包含在后者中）。`;
-const cs=D.summary.conservation;
-$("conservationCounts").textContent=`原197条×5390列逐列统计：100%一致${cs.strict_columns}列；额外≥95%且<100%一致${cs.additional_95_columns}列；合计≥95%为${cs.total_ge95_columns}列（至少188/197）。228列均在EU237490中有实际碱基；其中2处中心为少数碱基，以紫圈标出。`;
-D.conservationSites.forEach(s=>{
-  if(s.source_position)$("highlightSite").appendChild(new Option(`列${s.alignment_column} → 中心${s.source_position} ${s.center_base} · ${s.majority_count}/197${s.center_matches_majority?"":" · 中心少数"}`,String(s.source_position)));
+$("conservationCounts").textContent="≥75%共704个显示位点；六档依次为84、113、139、140、166、62。597个低于75%及9个未入比对位点不着色；14个高光少数型保留实际字母与细圈。统计分母固定197。";
+displayUi.sites.forEach(s=>{
+ $("highlightSite").appendChild(new Option(`列${s.alignment_column} → 中心${s.source_position} ${s.center_base} · ${s.band} · ${s.majority_count}/197${s.center_matches_majority?"":" · 中心少数"}`,String(s.source_position)));
 });
 segmentOptions();renderPairs();selectSource(3);tab();applyZoom();conservationLayer();annotationLayer();
 window.analysisReady=true;

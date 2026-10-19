@@ -1,0 +1,80 @@
+{
+  "H17": {
+    "type": "pseudoknot",
+    "S_name": null,
+    "pairs": [
+      [
+        11,
+        700
+      ],
+      [
+        12,
+        699
+      ],
+      [
+        13,
+        698
+      ]
+    ],
+    "motifs_5prime_to_3prime": [
+      "UGA(UUU)U",
+      "AAA(AAA)UU"
+    ],
+    "authority": "explicit user annotation, 2026-10-19",
+    "included_in_original_341_pairs": false,
+    "independently_validated": false,
+    "alignment_column_pairs": [
+      [
+        9,
+        2821
+      ],
+      [
+        10,
+        2819
+      ],
+      [
+        11,
+        2818
+      ]
+    ]
+  },
+  "H505": {
+    "type": "pseudoknot",
+    "S_name": null,
+    "pairs": [
+      [
+        349,
+        371
+      ],
+      [
+        350,
+        370
+      ],
+      [
+        351,
+        369
+      ]
+    ],
+    "motifs_5prime_to_3prime": [
+      "(GUC)UAAUAU",
+      "A(GAC)"
+    ],
+    "authority": "explicit user annotation, 2026-10-19",
+    "included_in_original_341_pairs": false,
+    "independently_validated": false,
+    "alignment_column_pairs": [
+      [
+        1761,
+        1783
+      ],
+      [
+        1762,
+        1782
+      ],
+      [
+        1763,
+        1781
+      ]
+    ]
+  }
+}
